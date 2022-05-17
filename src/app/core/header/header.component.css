@@ -1,0 +1,32 @@
+.navbar-header {
+  background-color: var(--cor-barra-navegacao);
+}
+
+.navbar-brand {
+  color: var(--cor-logo-barra-navegacao);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, .5)
+}
+
+.nav-link:hover {
+  color: var(--cor-texto-barra-navegacao-hover);
+}
+
+.btn-dropdown {
+  text-decoration: none;
+  color: var(--cor-texto-barra-navegacao-dropdown);
+}
+
+.banner {
+  width: 100%;
+  height: 85px;
+  background-color: var( --cor-de-fundo-banner);
+}
+
+.banner-titulo{
+  color: var(--cor-titulo-banner);
+  font-weight: bold;
+  padding-top: 16px;
+}

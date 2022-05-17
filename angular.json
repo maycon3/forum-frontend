@@ -27,6 +27,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-spinner/animations/ball-climbing-dot.css",
               "src/styles.css"
             ],
             "scripts": []

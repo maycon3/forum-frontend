@@ -1,3 +1,13 @@
+:root {
+  --cor-barra-navegacao: #051932;
+  --cor-logo-barra-navegacao: #fff;
+  --cor-texto-barra-navegacao: rgba(255, 255, 255, .5);
+  --cor-texto-barra-navegacao-hover: #fff;
+  --cor-texto-barra-navegacao-dropdown: #fff;
+  --cor-de-fundo-banner:#093364;
+  --cor-titulo-banner: #fff;
+}
 
-
-
+/* body {
+  font-family: 'Noto Sans', sans-serif;
+} */
