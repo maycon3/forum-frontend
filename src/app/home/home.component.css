@@ -1,0 +1,52 @@
+.icone-categoria {
+  width: 6%;
+  border-left: 1px solid #e3e8ed;;
+  text-align: center;
+}
+
+h6{
+  margin:0;
+}
+
+.itens {
+  padding: 12px;
+  border-top: 1px solid #e3e8ed;;
+  border-bottom: 1px solid #e3e8ed;;
+  border-right: 1px solid #e3e8ed;;
+}
+
+
+.categoria-curso {
+  width: 60%;
+}
+
+.titulo-categoria {
+  padding: 10px 0;
+}
+
+.curso {
+  display: inline-block;
+  background-color: hsla(0,0%,84.7%,.4);
+  margin: 3px 3px 0 0;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 12px;
+  color:#747c81;
+}
+
+.total-topicos {
+  width: 12%;
+  text-align: center;
+  color: #747c81;
+}
+
+.topicos-sem-resposta {
+  width: 18%;
+  text-align: center;
+  color: #747c81;
+}
+
+.link-topicos {
+  font-size: 12px;
+  color: #747c81;
+}

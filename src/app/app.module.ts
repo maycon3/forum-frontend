@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { AppData } from './app-data';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { CoreModule } from './core/core.module';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
+    HttpClientInMemoryWebApiModule.forRoot(AppData),
     AppRoutingModule
   ],
   providers: [],
