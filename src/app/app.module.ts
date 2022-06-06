@@ -18,7 +18,7 @@ import { AppData } from './app-data';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-    HttpClientInMemoryWebApiModule.forRoot(AppData),
+    //HttpClientInMemoryWebApiModule.forRoot(AppData),
     AppRoutingModule
   ],
   providers: [],

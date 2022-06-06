@@ -1,5 +1,7 @@
 :root {
   --cor-barra-navegacao: #051932;
+  --cor-fundo-botao-criar-categoria: #051932;
+  --cor-text-botao-criar-categoria: #fff;
   --cor-logo-barra-navegacao: #fff;
   --cor-texto-barra-navegacao: rgba(255, 255, 255, .5);
   --cor-texto-barra-navegacao-hover: #fff;
@@ -11,3 +13,14 @@
 /* body {
   font-family: 'Noto Sans', sans-serif;
 } */
+
+.btn-primary {
+  background-color: var(--cor-fundo-botao-criar-categoria);
+  color: var(--cor-text-botao-criar-categoria);
+  border: var(--cor-fundo-botao-criar-categoria);
+}
+
+.btn-primary:hover {
+  background-color: var(--cor-fundo-botao-criar-categoria);
+  color: var(--cor-text-botao-criar-categoria);
+}

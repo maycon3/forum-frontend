@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
+import { environment } from "src/environments/environment";
 
 import { Observable } from "rxjs";
 
@@ -7,7 +8,10 @@ import { Observable } from "rxjs";
 export class ApiService {
 
   get apiHostUrl(): string {
-    return 'http://localhost';
+    if(environment.production) {
+      return environment.api;
+    }
+    return 'http://localhost/api';
   }
 
   constructor(private http: HttpClient) { }
