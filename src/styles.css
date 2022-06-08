@@ -8,11 +8,12 @@
   --cor-texto-barra-navegacao-dropdown: #fff;
   --cor-de-fundo-banner:#093364;
   --cor-titulo-banner: #fff;
+  --cor-erro-input: #dc3545;
 }
 
-/* body {
-  font-family: 'Noto Sans', sans-serif;
-} */
+body {
+  font-family:sans-serif;
+}
 
 .btn-primary {
   background-color: var(--cor-fundo-botao-criar-categoria);
@@ -23,4 +24,12 @@
 .btn-primary:hover {
   background-color: var(--cor-fundo-botao-criar-categoria);
   color: var(--cor-text-botao-criar-categoria);
+}
+
+.form-control {
+  font-family: sans-serif;
+}
+
+.nao-valido {
+  border-color: var(--cor-erro-input);
 }

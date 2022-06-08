@@ -1,5 +1,29 @@
 <section class="container mt-3">
   <div class="d-flex justify-content-end">
-    <a class="btn btn-primary">Criar Categoria</a>
+    <button class="btn btn-primary" (click)="salvaCategoria()">Criar Categoria</button>
   </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let categoria of listaCategoria$ |  async">
+            <td scope="row">{{categoria.id }}</td>
+            <td>{{ categoria.nome }}</td>
+            <td>
+              <div class="float-end">
+                <button class="btn btn-warning" (click)="salvaCategoria(categoria.id)">
+                  <i class="fa fa-pencil-square-o"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
 </section>
