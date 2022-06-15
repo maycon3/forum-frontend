@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center" *ngIf="ativo">
+  <pagination
+    [boundaryLinks]="true" [totalItems]="totalPagina"
+    previousText="&lsaquo;" nextText="&rsaquo;"
+    firstText="&laquo;" lastText="&raquo;"
+    (pageChanged)="pageChanged($event)"
+  >
+  </pagination>
+</div>

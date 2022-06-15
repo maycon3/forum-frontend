@@ -26,6 +26,26 @@ body {
   color: var(--cor-text-botao-criar-categoria);
 }
 
+
+.btn-check:active+.btn-primary,
+ .btn-check:checked+.btn-primary,
+ .btn-primary.active,
+ .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+  background-color: var(--cor-fundo-botao-criar-categoria);
+  color: var(--cor-text-botao-criar-categoria);
+ }
+
+.btn-outline-primary{
+  border-color: var(--cor-fundo-botao-criar-categoria);
+  color: var(--cor-fundo-botao-criar-categoria);
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--cor-fundo-botao-criar-categoria);
+  border-color: var(--cor-fundo-botao-criar-categoria);
+}
+
 .form-control {
   font-family: sans-serif;
 }

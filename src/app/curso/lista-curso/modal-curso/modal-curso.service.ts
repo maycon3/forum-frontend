@@ -2,21 +2,20 @@ import { Injectable } from "@angular/core";
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Observable } from "rxjs";
-
-import { ModalCategoriaComponent } from "./modal-categoria.component";
+import { ModalCursoComponent } from "./modal-curso.component";
 
 @Injectable()
-export class ModalCategoriaService {
+export class ModalCursoService {
 
   constructor(private modalService: BsModalService) { }
 
-  abreModal(id?: number): Observable<void> {
+  abreModalCurso(id?: number):Observable<void> {
     let initialState: any;
     if(id) {
       initialState = id;
     }
     const bsModalRef: BsModalRef = this.modalService
-      .show(ModalCategoriaComponent,
+      .show(ModalCursoComponent,
         {
           initialState,
           class: 'modal-lg',

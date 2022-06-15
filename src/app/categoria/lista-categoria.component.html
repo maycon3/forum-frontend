@@ -1,5 +1,8 @@
 <section class="container mt-3">
-  <div class="d-flex justify-content-end">
+  <div class="d-flex justify-content-between mb-3">
+    <a class="btn btn-outline-primary" routerLink="/curso">
+      <i class="fa fa-arrow-left"></i> voltar
+    </a>
     <button class="btn btn-primary" (click)="salvaCategoria()">Criar Categoria</button>
   </div>
       <table class="table table-striped">
@@ -24,6 +27,10 @@
           </tr>
         </tbody>
       </table>
+      <ng-template #info>
+        <p>
+          Não há categoria cadastrada
 
-
+        </p>
+      </ng-template>
 </section>
