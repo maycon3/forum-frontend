@@ -1,0 +1,46 @@
+<div
+  class="card cascading-right"
+  style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px)"
+>
+  <div class="card-body p-5 shadow-5">
+    <h2 class="fw-bold mb-5">Qualyt Forum</h2>
+    <form [formGroup]="formulario">
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <label class="form-label fw-bold" for="email">Email</label>
+        <input
+          type="email"
+          formControlName="email"
+          id="email"
+          class="form-control"
+          placeholder="email@email.com" />
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <label class="form-label fw-bold" for="senha">Senha</label>
+        <input
+          type="password"
+          formControlName="senha"
+          id="senha"
+          class="form-control" />
+      </div>
+    </form>
+
+     <!-- Submit button -->
+     <div class="text-center">
+      <button
+        type="button"
+        class="btn btn-primary btn-block mb-4"
+        (click)="logar()">
+        Entrar
+      </button>
+    </div>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+      <span>Criar conta Qualyt Forum:</span>
+      <a routerLink="singup" class="btn-singup"> Aqui! </a>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@
   --cor-de-fundo-banner:#093364;
   --cor-titulo-banner: #fff;
   --cor-erro-input: #dc3545;
+  --cor-link-rota-singup: #051932;
 }
 
 body {
@@ -52,4 +53,14 @@ body {
 
 .nao-valido {
   border-color: var(--cor-erro-input);
+}
+
+.cascading-right {
+  margin-right: -50px;
+}
+
+@media (max-width: 991.98px) {
+  .cascading-right {
+    margin-right: 0;
+  }
 }

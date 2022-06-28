@@ -43,18 +43,23 @@ export class ModalCursoComponent extends BaseFormComponent implements OnInit {
   }
 
   salvar(): void {
-    const curso = this.formulario.getRawValue() as Curso;
-    this.cursoService.post(curso).subscribe(()=> {
-        this.resultado.next();
-        this.close();
-    });
+    const id = this.formulario.get('id')?.value;
+    if(this.formulario.valid) {
+      const curso = this.formulario.getRawValue() as Curso;
+      this.cursoService.post(curso).subscribe(()=> {
+          this.resultado.next();
+          this.close();
+      });
+    }else {
+      this.verficaValidacoesForms(this.formulario);
+    }
   }
 
   private createForm(): void {
     this.formulario = this.fb.group({
       id: [null],
       nomeCurso:[null,[Validators.required]],
-      categoriaId: ['']
+      categoriaId: ['',[Validators.required]]
     });
   }
 

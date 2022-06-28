@@ -8,7 +8,10 @@
       <div class="row">
       <div class="col-6">
         <label></label>
-        <select class="form-select" formControlName="categoriaId">
+        <select
+          class="form-select"
+          formControlName="categoriaId"
+          [ngClass]="aplicaCssDeErro('categoriaId')">
           <option value="">Selecione a Categoria</option>
           <option
             *ngFor="let categoria of categorias"
@@ -16,6 +19,10 @@
               {{ categoria.nome }}
           </option>
         </select>
+        <app-erro-msg
+          [control]="converteParaFormControl(formulario.get('nomeCurso'))"
+          label="Categoria" >
+        </app-erro-msg>
       </div>
       <div class="col-6">
         <label class="fw-bold" for="nomeCurso">Nome do Curso</label>
@@ -23,7 +30,12 @@
           type="text"
           formControlName="nomeCurso"
           class="form-control"
-          id="nomeCurso">
+          id="nomeCurso"
+          [ngClass]="aplicaCssDeErro('nomeCurso')">
+          <app-erro-msg
+          [control]="converteParaFormControl(formulario.get('nomeCurso'))"
+          label="Nome do Curso" >
+        </app-erro-msg>
       </div>
     </div>
     </form>

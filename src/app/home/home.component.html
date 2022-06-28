@@ -1,22 +1,22 @@
 <section class="container forum mt-5">
   <article class="">
     <ul>
-      <li class="d-flex mb-3" *ngFor="let item of listaCategoria$ |async">
+      <li class="d-flex mb-3" *ngFor="let home of homes$ |async">
         <div class="icone-categoria itens">
           <p>icone</p>
         </div>
         <div class="categoria-curso itens">
-            <h6 class="titulo-categoria">{{ item.categoria }}</h6>
+            <h6 class="titulo-categoria">{{ home.nome }}</h6>
             <div class="lista-curso">
-              <span class="curso" *ngFor="let itemCurso of item.cursos">{{itemCurso.nomeCurso}}</span>
+              <span class="curso" *ngFor="let curso of home.cursos">{{curso.nomeCurso}}</span>
             </div>
         </div>
         <div class="total-topicos d-flex justify-content-center flex-column itens">
-          <h6>{{item.totalTopicos}}</h6>
+          <h6>{{home.topico}}</h6>
           <a class="link-topicos" href="#">tópicos</a>
         </div>
         <div class="topicos-sem-resposta d-flex justify-content-center flex-column itens">
-          <h6>{{ item.semResposta }}</h6>
+          <h6>{{ home.resposta }}</h6>
           <a class="link-topicos" href="#">sem resposta</a>
         </div>
       </li>

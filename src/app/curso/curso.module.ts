@@ -14,6 +14,7 @@ import { CategoriaService } from "../categoria/categoria.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PaginatorModule } from "../shared/components/paginator/paginator.module";
 import { CursoResolve } from "./lista-curso/curso.resolve";
+import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CursoResolve } from "./lista-curso/curso.resolve";
     FormsModule,ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
+    ErroMsgModule,
     PaginatorModule,
     RoutingCursoModule
   ],

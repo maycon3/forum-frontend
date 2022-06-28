@@ -1,6 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 import { NgxSpinnerService } from "ngx-spinner";
+import { Observable } from "rxjs";
+import { User } from "../user/user";
+import { UserService } from "../user/user.service";
 
 @Component({
   selector: 'app-header',
@@ -9,9 +13,21 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class HeaderComponent implements OnInit {
 
+ nome: string|null = '';
 
-  constructor(private spinner: NgxSpinnerService) { }
+  constructor(
+    private router: Router,
+    private spinner: NgxSpinnerService,
+    private userService: UserService
+  ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+     this.userService.getUser().subscribe(res =>this.nome = res);
+   }
+
+   logout(): void {
+    this.userService.logout();
+    this.router.navigate(['/login']);
+   }
 
 }

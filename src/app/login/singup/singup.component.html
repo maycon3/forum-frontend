@@ -1,0 +1,85 @@
+<div
+  class="card cascading-right"
+  style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px)"
+>
+  <div class="card-body p-5 shadow-5">
+    <h3 class="fw-bold mb-5">Crianção de conta Forum</h3>
+    <app-alert></app-alert>
+    <form [formGroup]="formulario">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <label for="nome">Nome</label>
+          <input
+            type="text"
+            formControlName="nome"
+            class="form-control"
+            id="nome"
+            [ngClass]="aplicaCssDeErro('nome')"
+          />
+          <app-erro-msg
+            [control]="converteParaFormControl(formulario.get('nome'))"
+            label="Nome"
+          >
+          </app-erro-msg>
+        </div>
+        <div class="col-md-6">
+          <label for="sobrenome">Sobrenome</label>
+          <input
+            type="text"
+            formControlName="sobreNome"
+            class="form-control"
+            id="sobrenome"
+            [ngClass]="aplicaCssDeErro('sobreNome')"
+          />
+          <app-erro-msg
+            [control]="converteParaFormControl(formulario.get('sobreNome'))"
+            label="Sebrenome"
+          >
+          </app-erro-msg>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col=12 mb-4">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control"
+            id="email"
+            placeholder="email@email.com"
+            [ngClass]="aplicaCssDeErro('email')"
+          />
+          <app-erro-msg
+            [control]="converteParaFormControl(formulario.get('email'))"
+            label="Email"
+          >
+          </app-erro-msg>
+        </div>
+        <div class="col-12 mb-4">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            formControlName="senha"
+            class="form-control"
+            id="senha"
+            [ngClass]="aplicaCssDeErro('senha')"
+          />
+          <app-erro-msg
+            [control]="converteParaFormControl(formulario.get('senha'))"
+            label="Senha"
+          >
+          </app-erro-msg>
+        </div>
+      </div>
+    </form>
+
+    <div class="d-flex justify-content-end">
+      <a routerLink="/login" class="btn btn-secondary">
+        <i class="fa fa-arrow-left"></i> voltar
+      </a>
+      <button class="btn btn-primary" (click)="criarUsuario()">
+        Criar conta
+      </button>
+    </div>
+  </div>
+</div>

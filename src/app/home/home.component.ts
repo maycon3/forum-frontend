@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { HomeService } from "./home.service";
-import { ListaCategoria } from "./modelo";
 
 @Component({
   selector: 'app-home',
@@ -10,7 +9,7 @@ import { ListaCategoria } from "./modelo";
 })
 export class HomeComponent implements OnInit {
 
-  listaCategoria$ = this.homeService.getAll();
+  homes$ = this.homeService.getAll();
 
   constructor(private homeService: HomeService) { }
 

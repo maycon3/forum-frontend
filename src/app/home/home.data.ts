@@ -1,55 +1,26 @@
-import { ListaCategoria } from "./modelo";
+import { Home } from "./home";
+
 
 export class HomeData {
 
-  static homes: ListaCategoria[] = [
+  static homes: Home[] = [
     {
       id:1,
-      categoria:'Programação',
+      nome:'Programação',
       cursos:[
         {
           id:1,
-          nomeCurso:'java'
+          nomeCurso:'java',
+          categoria: 'Programação'
         },
         {
           id:2,
-          nomeCurso: 'java API'
+          nomeCurso: 'java API',
+          categoria: 'Programação'
         }
       ],
-      semResposta: 240,
-      totalTopicos:10023
+      topico:10023,
+      resposta: 1000
     },
-    {
-      id:2,
-      categoria:'Front-end',
-      cursos:[
-        {
-          id:3,
-          nomeCurso:'HTML e CSS'
-        },
-        {
-          id:4,
-          nomeCurso: 'Angular'
-        },
-        {
-          id:5,
-          nomeCurso: 'React'
-        },
-        {
-          id:6,
-          nomeCurso: 'Frameworks MVC'
-        },
-        {
-          id:7,
-          nomeCurso: 'Automação e Performance'
-        },
-        {
-          id:8,
-          nomeCurso: 'jQuery'
-        }
-      ],
-      semResposta: 240,
-      totalTopicos:10023
-    }
   ]
 }
