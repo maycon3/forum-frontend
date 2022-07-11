@@ -4,9 +4,9 @@ import { HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { ApiService } from '../core/services/api.service';
-import { Curso, Page } from './lista-curso/modal-curso/curso';
+import { Curso, Page, CursoPage } from './lista-curso/modal-curso/curso';
 
-@Injectable()
+@Injectable({'providedIn': 'root'})
 export class CursoService {
 
   private cursoUrl = '/cursos';
@@ -23,6 +23,10 @@ export class CursoService {
 
   get(id: number): Observable<Curso> {
     return this.apiService.get(`${this.cursoUrl}/${id}`);
+  }
+
+  getAll():Observable<CursoPage[]> {
+      return this.apiService.get(`${this.cursoUrl}/lista`);
   }
 
   post(curso: Curso): Observable<void> {

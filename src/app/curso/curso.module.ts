@@ -31,7 +31,7 @@ import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
     RoutingCursoModule
   ],
   providers:[
-    CursoService,
+   // CursoService,
     ModalCursoService,
     CategoriaService,
     CursoResolve,

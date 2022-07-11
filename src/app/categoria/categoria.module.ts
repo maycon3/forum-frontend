@@ -27,7 +27,7 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
   ],
   exports:[],
   providers:[
-    CategoriaService,
+    //CategoriaService,
     ModalCategoriaService,
     BsModalService
   ]

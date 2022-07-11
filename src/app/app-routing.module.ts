@@ -6,7 +6,13 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'forum'
+  },
+
+  {
+    path: 'forum',
+    loadChildren: ()=> import('./forum/forum.module').then((m)=> m.ForumModule),
+    canActivate:[AuthGuard]
   },
 
   {
@@ -14,11 +20,6 @@ const routes: Routes = [
     loadChildren: ()=> import('./login/login.module').then((m)=> m.LoginModule)
   },
 
-  {
-    path: 'home',
-    loadChildren: ()=> import('./home/home.module').then((m) => m.HomeModule),
-    canActivate:[AuthGuard]
-  },
 
   {
     path:'categoria',

@@ -15,9 +15,10 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { RequestInterceptor } from "./auth/request.interceptor";
 import { AuthGuard } from "./auth/auth.guard";
 import { LoginGuard } from "./auth/login.guard";
+import { PermissaoDirective } from "./permissao/permissao.directive";
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent,PermissaoDirective],
   imports: [
     CommonModule,
     BsDropdownModule.forRoot(),

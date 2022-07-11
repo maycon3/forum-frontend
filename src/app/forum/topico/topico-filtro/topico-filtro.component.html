@@ -1,0 +1,71 @@
+<div class="d-flex justify-content-end mt-4 mb-2">
+  <button type="button" class="btn btn-primary">criar novo tópico</button>
+</div>
+
+<section class="filtros">
+  <form [formGroup]="formulario">
+    <div class="row">
+      <div class="d-flex justify-content-between">
+        <div class="filtros-selecionavel">
+          <article class="col-md-3 display-inline-block select-filtro">
+            <select
+              class="form-select"
+              formControlName="itemCategoria"
+              (change)="categoriaSelecionada($event.target.value)"
+            >
+              <option value="">Todas as categorias</option>
+              <option *ngFor="let categoria of $categorias |async" value="{{getCategoriaEnumValue(categoria.nome)}}">
+                {{ categoria.nome }}
+              </option>
+            </select>
+          </article>
+
+          <article
+            class="col-md-3 display-inline-block select-filtro"
+            *ngIf="false"
+          >
+            <select class="form-select">
+              <option value="">Todos os cursos</option>
+              <option *ngFor="let curso of cursos" [ngValue]="curso.id">
+                {{ curso.nomeCurso }}
+              </option>
+            </select>
+          </article>
+
+          <ul class="nav-filtro">
+            <li>
+              <a
+                class="botao-filtro"
+                [class.active]="isActive('todos')"
+                (click)="navegaTodos()"
+              >
+                todos
+              </a>
+            </li>
+            <li>
+              <a
+                class="botao-filtro"
+                [class.active]="isActive('sem-resposta')"
+                (click)="navegaSemResposta()"
+              >
+                sem resposta
+              </a>
+            </li>
+            <li><a class="botao-filtro">solucionados</a></li>
+          </ul>
+        </div>
+
+        <div class="search">
+          <div class="col-md-12">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Busque por assunto aqui"
+            />
+          </div>
+          <span class="icone"><i class="fa fa-search"></i></span>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
