@@ -1,3 +1,5 @@
+@import 'reset-css';
+
 :root {
   --cor-barra-navegacao: #051932;
   --cor-fundo-botao-criar-categoria: #051932;
@@ -15,38 +17,19 @@
   --cor-fundo-topico-filtro: #fff;
   --cor-body: #f9fbfd;
   --cor-texto-select: #576169;
-
+  --fonte-principal: "Poppins";
+  --fonte-segundaria: "josefin Sans";
+  --cor-de-fundo: #EBECEE;
+  --signin-fundo: #FFFFFF;
+  --signin-icone: #093364;
+  --signin-texto-logo:#093364;
+  --signin-input: #EEEEEE;
 }
 
-body {
-  font-family:sans-serif;
-  background-color: var(--cor-body);
-}
 
-.btn-principal {
-  background-color: var(--cor-fundo-botao-criar-categoria);
-  color: var(--cor-text-botao-criar-categoria);
-  border: var(--cor-fundo-botao-criar-categoria);
-}
-
-.form-select{
-  color:var(--cor-texto-select);
-}
-
-.form-control {
-  font-family: sans-serif;
-}
-
-.nao-valido {
-  border-color: var(--cor-erro-input);
-}
-
-.cascading-right {
-  margin-right: -50px;
-}
-
-@media (max-width: 991.98px) {
-  .cascading-right {
-    margin-right: 0;
-  }
+.app {
+  font-size: 16px;
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  background-color: var(--cor-de-fundo);
 }
