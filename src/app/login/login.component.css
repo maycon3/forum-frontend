@@ -1,8 +1,4 @@
 
 .login__parte_principal {
-  background-image: url("../../assets/image/codigo.jpg");
-}
-
-.login__parte_principal {
   display: none;
 }

@@ -4,8 +4,8 @@
   </div>
   <h3 class="signin__titulo">Qualyt Soft</h3>
   <form>
-    <input type="text" formControlName="" class="signin__input" placeholder="Usuario">
-    <input type="text" formControlName="" class="signin__input" placeholder="Senha">
+    <input type="text" formControlName="email" class="signin__input" placeholder="Usuario">
+    <input type="password" formControlName="senha" class="signin__input" placeholder="Senha">
   </form>
 
   <div class="signin__configuracao">
@@ -20,5 +20,9 @@
 
   <div class="signin__entrar">
     <button class="signin__entrar___btn">Entrar</button>
+  </div>
+
+  <div class="signin__cadastro">
+    <a [routerLink]="['/login/singup']" class="signin__cadastro___singup">Cadastra-se</a>
   </div>
 </section>

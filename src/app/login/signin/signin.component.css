@@ -75,3 +75,27 @@
   background-color: var(--signin-texto-logo);
   color: #fff;
 }
+
+.signin__cadastro {
+  margin-top: 3em;
+  text-align: end;
+}
+
+.signin__cadastro___singup {
+  text-decoration: none;
+  padding: .4em 1em;
+  background-color: var(--signin-texto-logo);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+
+  .signin {
+    margin: 20% 20%;
+  }
+
+  .signin__icone___titulo {
+    left: 38px;
+  }
+
+}
