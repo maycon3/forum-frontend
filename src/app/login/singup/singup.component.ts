@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, Validators } from "@angular/forms";
+import { UntypedFormBuilder, Validators } from "@angular/forms";
+
+import { MessageService } from "primeng/api";
 
 import { BaseFormComponent } from "src/app/shared/directives/base-form/base-form.component";
 import { LoginService } from "../login.service";
@@ -13,8 +15,9 @@ import { NovoUsuario } from "./novo-usuario";
 export class SingupComponent extends BaseFormComponent implements OnInit {
 
   constructor(
-    private fb: FormBuilder,
-    private loginService: LoginService
+    private fb: UntypedFormBuilder,
+    private loginService: LoginService,
+    private messageService: MessageService
   ){
     super();
   }

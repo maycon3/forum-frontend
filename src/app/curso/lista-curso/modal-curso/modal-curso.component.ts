@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, Validators } from "@angular/forms";
+import { UntypedFormBuilder, Validators } from "@angular/forms";
 
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { Subject } from "rxjs";
@@ -23,7 +23,7 @@ export class ModalCursoComponent extends BaseFormComponent implements OnInit {
     private modalService: BsModalService,
     private categoriaService: CategoriaService,
     private cursoService: CursoService,
-    private fb: FormBuilder
+    private fb: UntypedFormBuilder
   ) {
     super();
   }

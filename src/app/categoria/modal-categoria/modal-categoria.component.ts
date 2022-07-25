@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 
 import { Subject } from 'rxjs';
 import { BsModalService } from 'ngx-bootstrap/modal';
@@ -19,7 +19,7 @@ export class ModalCategoriaComponent extends BaseFormComponent implements OnInit
   constructor(
     private bsModalService: BsModalService,
     private categoriaService: CategoriaService,
-     private fb: FormBuilder
+     private fb: UntypedFormBuilder
     ) {
       super();
     }

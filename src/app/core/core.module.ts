@@ -2,7 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { HeaderComponent } from "./header/header.component";
 
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import {ToastModule} from 'primeng/toast';
 
 import { ApiService } from "./services/api.service";
 import { NgxSpinnerModule } from "ngx-spinner";
@@ -16,12 +16,13 @@ import { RequestInterceptor } from "./auth/request.interceptor";
 import { AuthGuard } from "./auth/auth.guard";
 import { LoginGuard } from "./auth/login.guard";
 import { PermissaoDirective } from "./permissao/permissao.directive";
+import { ErrorInterceptor } from "./intercept/error.interceptor";
 
 @NgModule({
   declarations: [HeaderComponent,PermissaoDirective],
   imports: [
     CommonModule,
-    BsDropdownModule.forRoot(),
+    ToastModule,
     NgxSpinnerModule,
     RouterModule
   ],
@@ -37,6 +38,11 @@ import { PermissaoDirective } from "./permissao/permissao.directive";
     {
       provide: HTTP_INTERCEPTORS,
       useClass: RequestInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
       multi: true
     }
   ]
