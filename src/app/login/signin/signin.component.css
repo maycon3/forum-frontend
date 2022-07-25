@@ -30,16 +30,7 @@
 }
 
 .signin__input {
-  width: 90%;
-  padding: .7em;
-  font-family: var(--fonte-principal);
-  border: 1px solid transparent;
-  background-color: var(--signin-input);
   margin-bottom: .5em;
-}
-
-.signin__input:focus {
-  outline: none;
 }
 
 .signin__input::placeholder {

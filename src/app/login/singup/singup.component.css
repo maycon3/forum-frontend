@@ -1,3 +1,32 @@
-.btn-secondary {
-  margin-right: 5px;
+.singup {
+  background-color: var(--signin-fundo);
+  margin: 20% auto;
+  padding: 2em 1em;
+}
+
+.singup__titulo {
+  font-size: 18;
+  font-weight: 700;
+  color: var(--signin-texto-logo);
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.singup__form {
+  margin: 1em 0;
+}
+
+.singup__form___input {
+  width: 100%;
+}
+
+.singup__cadastrar {
+  display: flex;
+  flex-direction: column;
+}
+
+.singup__cadastrar___btn {
+  background-color: var(--cor-fundo-btn);
+  color: var(--cor-banco);
+  margin: 1em 0;
 }

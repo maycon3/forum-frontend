@@ -1,84 +1,30 @@
-<div
-  class="card cascading-right"
-  style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px)"
->
-  <div class="card-body p-5 shadow-5">
-    <h3 class="fw-bold mb-5">Crianção de conta Forum</h3>
-    <form [formGroup]="formulario">
-      <div class="row mb-4">
-        <div class="col-md-6">
-          <label for="nome">Nome</label>
-          <input
-            type="text"
-            formControlName="nome"
-            class="form-control"
-            id="nome"
-            [ngClass]="aplicaCssDeErro('nome')"
-          />
-          <app-erro-msg
-            [control]="converteParaFormControl(formulario.get('nome'))"
-            label="Nome"
-          >
-          </app-erro-msg>
-        </div>
-        <div class="col-md-6">
-          <label for="sobrenome">Sobrenome</label>
-          <input
-            type="text"
-            formControlName="sobreNome"
-            class="form-control"
-            id="sobrenome"
-            [ngClass]="aplicaCssDeErro('sobreNome')"
-          />
-          <app-erro-msg
-            [control]="converteParaFormControl(formulario.get('sobreNome'))"
-            label="Sebrenome"
-          >
-          </app-erro-msg>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col=12 mb-4">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            formControlName="email"
-            class="form-control"
-            id="email"
-            placeholder="email@email.com"
-            [ngClass]="aplicaCssDeErro('email')"
-          />
-          <app-erro-msg
-            [control]="converteParaFormControl(formulario.get('email'))"
-            label="Email"
-          >
-          </app-erro-msg>
-        </div>
-        <div class="col-12 mb-4">
-          <label for="senha">Senha</label>
-          <input
-            type="password"
-            formControlName="senha"
-            class="form-control"
-            id="senha"
-            [ngClass]="aplicaCssDeErro('senha')"
-          />
-          <app-erro-msg
-            [control]="converteParaFormControl(formulario.get('senha'))"
-            label="Senha"
-          >
-          </app-erro-msg>
-        </div>
-      </div>
-    </form>
+<section class="singup">
+  <h3 class="singup__titulo">Cadastro de Usuario</h3>
+  <form [formGroup]="formulario">
 
-    <div class="d-flex justify-content-end">
-      <a routerLink="/login" class="btn btn-secondary">
-        <i class="fa fa-arrow-left"></i> voltar
-      </a>
-      <button class="btn btn-primary" (click)="criarUsuario()">
-        Criar conta
-      </button>
+    <div class="singup__form">
+      <label for="nome">Nome</label>
+      <input type="text" class="singup__form___input input__form">
     </div>
+
+    <div class="singup__form">
+      <label for="sobrenome">Sobrenome</label>
+      <input type="text" class="singup__form___input input__form">
+    </div>
+
+    <div class="singup__form">
+      <label for="email">Email</label>
+      <input type="email" class="singup__form___input input__form" id="email">
+    </div>
+
+    <div class="singup__form">
+      <label for="senha">Senha</label>
+      <input type="password" class="singup__form___input input__form" id="senha">
+    </div>
+  </form>
+
+  <div class="singup__cadastrar">
+    <button type="button" class="btn singup__cadastrar___btn">Cadastar</button>
+    <a type="button" routerLink="/login" class="btn btn-ligth">Cancelar</a>
   </div>
-</div>
+</section>
