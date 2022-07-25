@@ -5,7 +5,7 @@
 }
 
 .singup__titulo {
-  font-size: 18;
+  font-size: 18px;
   font-weight: 700;
   color: var(--signin-texto-logo);
   text-align: center;
@@ -37,5 +37,7 @@
   .singup {
     margin: 20% 20%;
   }
+
+
 
 }
