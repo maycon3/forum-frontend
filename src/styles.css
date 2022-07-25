@@ -29,6 +29,7 @@
   --cor-fundo-btn-light-principal: #FFFFFF;
   --cor-texto-btn-light-principal: #093364;
   --cor-fundo-btn: #093364;
+  --cor-erro: #ff0000;
 
 }
 
@@ -66,4 +67,8 @@
   background-color: var(--cor-fundo-btn-light-principal);
   color: var(--cor-texto-btn-light-principal);
   border: 1px solid var(--cor-texto-btn-light-principal);;
+}
+
+.nao-valido {
+  border: 1px solid var(--cor-erro);
 }

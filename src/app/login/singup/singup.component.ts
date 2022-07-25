@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { UntypedFormBuilder, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 
 import { MessageService } from "primeng/api";
 
@@ -17,7 +18,8 @@ export class SingupComponent extends BaseFormComponent implements OnInit {
   constructor(
     private fb: UntypedFormBuilder,
     private loginService: LoginService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router: Router
   ){
     super();
   }
@@ -32,8 +34,12 @@ export class SingupComponent extends BaseFormComponent implements OnInit {
       this.loginService.criarConta(usuario)
         .subscribe(() => {
           this.limpaCampos();
-        },
-        error =>{
+          this.messageService.add({
+            severity:'success',
+            summary: 'Sucesso',
+            detail: 'Usuario cadastrado com sucesso!'
+          });
+          this.router.navigate(['/login']);
         });
     }else {
       this.verficaValidacoesForms(this.formulario);

@@ -1,12 +1,12 @@
 import { Directive } from "@angular/core";
-import { AbstractControl, UntypedFormControl, UntypedFormGroup } from "@angular/forms";
+import { AbstractControl, FormGroup, UntypedFormControl, UntypedFormGroup } from "@angular/forms";
 
 @Directive()
 export abstract class BaseFormComponent {
 
-  formulario: UntypedFormGroup;
+  formulario: FormGroup;
 
-  verficaValidacoesForms(formGroup: UntypedFormGroup): void {
+  verficaValidacoesForms(formGroup: FormGroup): void {
     Object.keys(formGroup.controls).forEach(campo => {
       const controle = formGroup.get(campo);
       controle?.markAsDirty();
@@ -14,8 +14,8 @@ export abstract class BaseFormComponent {
     });
   }
 
-  converteParaFormControl(absCtrl: AbstractControl | null): UntypedFormControl {
-    const ctrl = absCtrl as UntypedFormControl;
+  converteParaFormControl(absCtrl: AbstractControl | null): FormGroup {
+    const ctrl = absCtrl as FormGroup;
     return ctrl;
   }
 

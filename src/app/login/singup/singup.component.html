@@ -4,27 +4,74 @@
 
     <div class="singup__form">
       <label for="nome">Nome</label>
-      <input type="text" class="singup__form___input input__form">
+      <input
+        formControlName="nome"
+        type="text"
+        id="nome"
+        class="singup__form___input input__form"
+        [ngClass]="aplicaCssDeErro('nome')">
+        <app-erro-msg
+          [control]="formulario.get('nome')"
+          label="Nome">
+        </app-erro-msg>
     </div>
 
     <div class="singup__form">
       <label for="sobrenome">Sobrenome</label>
-      <input type="text" class="singup__form___input input__form">
+      <input
+        formControlName="sobreNome"
+        type="text"
+        id="sobrenome"
+        class="singup__form___input input__form"
+        [ngClass]="aplicaCssDeErro('sobreNome')">
+        <app-erro-msg
+          [control]="formulario.get('sobreNome')"
+          label="SobreNome">
+        </app-erro-msg>
     </div>
 
     <div class="singup__form">
       <label for="email">Email</label>
-      <input type="email" class="singup__form___input input__form" id="email">
+      <input
+        formControlName="email"
+        type="email"
+        class="singup__form___input input__form"
+        id="email"
+        [ngClass]="aplicaCssDeErro('email')">
+        <app-erro-msg
+          [control]="formulario.get('email')"
+          label="Email">
+        </app-erro-msg>
     </div>
 
     <div class="singup__form">
       <label for="senha">Senha</label>
-      <input type="password" class="singup__form___input input__form" id="senha">
+      <input
+        formControlName="senha"
+        type="password"
+        class="singup__form___input input__form"
+        id="senha"
+        [ngClass]="aplicaCssDeErro('senha')">
+        <app-erro-msg
+          [control]="formulario.get('senha')"
+          label="Senha">
+        </app-erro-msg>
     </div>
   </form>
 
   <div class="singup__cadastrar">
-    <button type="button" class="btn singup__cadastrar___btn">Cadastar</button>
-    <a type="button" routerLink="/login" class="btn btn-ligth">Cancelar</a>
+    <button
+      type="button"
+      class="btn singup__cadastrar___btn"
+      (click)="criarUsuario()"
+      >
+      Cadastar
+    </button>
+    <a
+      type="button"
+      routerLink="/login"
+      class="btn btn-ligth">
+      Cancelar
+    </a>
   </div>
 </section>

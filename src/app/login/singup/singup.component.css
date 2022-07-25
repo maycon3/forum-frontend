@@ -30,3 +30,12 @@
   color: var(--cor-banco);
   margin: 1em 0;
 }
+
+
+@media screen and (min-width: 768px) {
+
+  .singup {
+    margin: 20% 20%;
+  }
+
+}

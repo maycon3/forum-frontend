@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { UntypedFormControl } from "@angular/forms";
+import { FormGroup, UntypedFormControl } from "@angular/forms";
 
 import { FormValidations } from "./form-validation";
 
@@ -10,7 +10,7 @@ import { FormValidations } from "./form-validation";
 })
 export class ErroMsgComponent  {
 
-  @Input() control: UntypedFormControl;
+  @Input() control: FormGroup;
   @Input() label: string;
 
   get erroMensagem(): FormValidations | null {
