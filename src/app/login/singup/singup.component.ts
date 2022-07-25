@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 
-import { AlertService } from "src/app/shared/components/alert/alert.service";
 import { BaseFormComponent } from "src/app/shared/directives/base-form/base-form.component";
 import { LoginService } from "../login.service";
 import { NovoUsuario } from "./novo-usuario";
@@ -15,8 +14,7 @@ export class SingupComponent extends BaseFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private loginService: LoginService,
-    private alertService: AlertService
+    private loginService: LoginService
   ){
     super();
   }
@@ -31,10 +29,8 @@ export class SingupComponent extends BaseFormComponent implements OnInit {
       this.loginService.criarConta(usuario)
         .subscribe(() => {
           this.limpaCampos();
-          this.alertService.success('Conta criada com sucesso.')
         },
         error =>{
-          this.alertService.danger( error.error.errors[0].mensagem);
         });
     }else {
       this.verficaValidacoesForms(this.formulario);

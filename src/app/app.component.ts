@@ -10,12 +10,9 @@ import { TokenService } from './core/token/token.service';
 export class AppComponent implements OnInit{
   title = 'forum';
 
-  constructor(private tokenService: TokenService) {}
+  constructor() {}
 
   ngOnInit(): void {
   }
 
-  estaLogado(): boolean {
-    return this.tokenService.hasToken();
-  }
 }

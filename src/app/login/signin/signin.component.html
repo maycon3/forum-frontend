@@ -1,9 +1,10 @@
+
 <section class="signin">
   <div class="signin__icone">
     <span class="signin__icone___titulo fa fa-user-o"></span>
   </div>
   <h3 class="signin__titulo">Qualyt Soft</h3>
-  <form>
+  <form [formGroup]="formulario">
     <input type="text" formControlName="email" class="signin__input" placeholder="Usuario">
     <input type="password" formControlName="senha" class="signin__input" placeholder="Senha">
   </form>
@@ -19,7 +20,7 @@
   </div>
 
   <div class="signin__entrar">
-    <button class="signin__entrar___btn">Entrar</button>
+    <button class="signin__entrar___btn" (click)="logar()">Entrar</button>
   </div>
 
   <div class="signin__cadastro">

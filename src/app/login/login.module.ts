@@ -8,7 +8,6 @@ import { SingupComponent } from "./singup/singup.component";
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 import { LoginRoutingModule } from "./login-routing.module";
 import { LoginService } from "./login.service";
-import { AlertModule } from "../shared/components/alert/alert.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { AlertModule } from "../shared/components/alert/alert.module";
     FormsModule,
     ReactiveFormsModule,
     ErroMsgModule,
-    AlertModule,
     LoginRoutingModule
   ],
   providers:[
