@@ -38,6 +38,17 @@
     margin: 20% 20%;
   }
 
+}
 
+@media screen and (min-width:1024px) {
 
+  .singup {
+    margin: 0;
+    height: 100%;
+    padding-top: 3em;
+  }
+
+  .singup__cadastrar {
+    justify-content: end;
+  }
 }
