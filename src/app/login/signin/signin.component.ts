@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { UntypedFormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
+import { NgxSpinnerService } from "ngx-spinner";
+
 import { AuthService } from "src/app/core/auth/auth.service";
 import { BaseFormComponent } from "src/app/shared/directives/base-form/base-form.component";
 import { Credencias } from "./credencias";
@@ -16,7 +18,8 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
   constructor(
     private fb: UntypedFormBuilder,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private spinner: NgxSpinnerService
   ){
     super();
   }
@@ -26,6 +29,7 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
   }
 
   logar(): void {
+    this.spinner.show();
     if(this.formulario.valid){
       const credencias = this.formulario.getRawValue() as Credencias;
       this.authService.authenticate(credencias)
