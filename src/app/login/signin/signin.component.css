@@ -15,8 +15,10 @@
 
 .signin__icone___titulo {
   position: absolute;
-  top: 15px;
-  left: 29px;
+  left: 50%;
+  top: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   font-size: 20px;
   color: #fff;
 }
@@ -86,9 +88,7 @@
     margin: 20% 20%;
   }
 
-  .signin__icone___titulo {
-    left: 38px;
-  }
+
 
 }
 
@@ -99,4 +99,7 @@
     height: 100%;
     padding-top: 6em;
   }
+
+
+
 }
