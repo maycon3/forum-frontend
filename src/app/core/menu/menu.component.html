@@ -1,0 +1,44 @@
+<nav [ngClass]="{'active-menu': isShow}">
+  <div class="menu">
+    <div class="menu__info">
+      <div class="menu__logo">
+        <h3 class="menu__info___logo">Qualyt
+          <span class="menu__info___logo-fraco">Soft</span></h3>
+        <a class="menu__info___btn fa fa-times-circle-o" (click)="toggle()"></a>
+      </div>
+      <h3 class="menu__info___nome">{{ getNome() }}</h3>
+    </div>
+    <div class="menu__container">
+      <ul class="menu__lista">
+        <li class="menu__item">
+          <a routerLink="" class="menu__item___link">
+            <span class="fa fa-user"></span>
+             Perfil
+          </a>
+        </li>
+        <li class="menu__item">
+          <a routerLink="" class="menu__item___link">
+            <span class="fa fa-book"></span>
+            Categoria
+          </a>
+        </li>
+        <li class="menu__item">
+          <a routerLink="" class="menu__item___link">
+            <span class="fa fa-university"></span>
+            Curso
+          </a>
+        </li>
+
+      </ul>
+      <ul class="menu__lista">
+        <li class="menu__item">
+          <a (click)="logout()" class="menu__item___link">
+            <span class="fa fa-power-off"></span>
+            Sair
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>

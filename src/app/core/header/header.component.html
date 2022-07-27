@@ -1,32 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-header" *ngIf="estaLogado()">
-  <div class="container">
-    <a class="navbar-brand" href="#">Qualyt</a>
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" permissao routerLink="/curso">Cursos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-
-    <div class="btn-group" dropdown >
-      <a id="button-basic" dropdownToggle type="button" class="btn-dropdown dropdown-toggle"
-              aria-controls="dropdown-basic">
-          {{ nome }} <span class="caret"></span>
-    </a>
-      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-          role="menu" aria-labelledby="button-basic">
-        <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" (click)="logout()">Sair</a>
-        </li>
-      </ul>
-    </div>
+<header class="cabecalho" *ngIf="estaLogado()">
+  <div class="cabecalho__menu">
+    <a class="cabecalho__menu___icone fa fa-bars" (click)="menu.toggle()"></a>
+    <app-menu #menu></app-menu>
   </div>
-</nav>
+</header>
 <div class="banner" *ngIf="estaLogado()">
   <div class="container">
       <h2 class="banner-titulo">Forum Especial</h2>

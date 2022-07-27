@@ -17,9 +17,14 @@ import { AuthGuard } from "./auth/auth.guard";
 import { LoginGuard } from "./auth/login.guard";
 import { PermissaoDirective } from "./permissao/permissao.directive";
 import { ErrorInterceptor } from "./intercept/error.interceptor";
+import { MenuComponent } from "./menu/menu.component";
 
 @NgModule({
-  declarations: [HeaderComponent,PermissaoDirective],
+  declarations: [
+    HeaderComponent,
+    PermissaoDirective,
+    MenuComponent
+  ],
   imports: [
     CommonModule,
     ToastModule,

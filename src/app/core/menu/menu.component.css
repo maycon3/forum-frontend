@@ -1,0 +1,80 @@
+.menu {
+  position: fixed;
+  height: 100%;
+  width: 90%;
+  max-width: 200px;
+  background: var(--cor-banco);
+  top: 0;
+  left: -90%;
+  transition: left 0.3s ease-out;
+  z-index: 1;
+}
+
+.active-menu .menu {
+  left: 0;
+}
+
+.menu__info {
+  background-color: var(--signin-texto-logo);
+  height: 15%;
+  position: relative;
+}
+
+.menu__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .7em .3em;
+}
+
+.menu__info___logo {
+  font-size: 19px;
+  color: var(--cor-banco);
+  font-family: var(--fonte-segundaria);
+  font-weight: 700;
+}
+
+.menu__info___logo-fraco {
+  font-weight: 400;
+}
+
+.menu__info___nome {
+  position: absolute;
+  font-size: 13px;
+  font-weight: 300;
+  color:var(--cor-banco);
+  padding: .3em;
+  bottom: 0;
+}
+
+.menu__info___btn {
+  color: var(--cor-banco);
+  font-size: 20px;
+}
+
+.menu__container {
+  display: flex;
+  height: 85%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu__lista {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5em;
+}
+
+.menu__item {
+  margin: .1em 0;
+  width: 100%;
+  background-color: var(--cor-de-fundo);
+  border: 1px solid transparent;
+}
+
+.menu__item___link {
+  display: block;
+  padding: .5em;
+  text-decoration: none;
+  color: var(--signin-texto-logo);
+}
