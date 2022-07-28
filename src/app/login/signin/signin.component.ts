@@ -34,7 +34,7 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
       const credencias = this.formulario.getRawValue() as Credencias;
       this.authService.authenticate(credencias)
         .subscribe(() => {
-         this.router.navigate(['/forum','todos',1]);
+         this.router.navigate(['/forum','todos']);
         });
     }
   }

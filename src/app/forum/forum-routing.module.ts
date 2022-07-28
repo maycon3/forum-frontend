@@ -5,9 +5,7 @@ import { ForumComponent } from "./forum.component";
 import { ListaTopicoComponent } from "./topico/lista-topico/lista-topico.component";
 
 const routes: Routes = [
-  { path: 'todos', component: ForumComponent },
-  { path: 'sem-resposta', component: ListaTopicoComponent },
-  { path: ':catStatus/:status', component: ListaTopicoComponent },
+  { path: 'todos', component: ForumComponent }
 ]
 
 @NgModule({
