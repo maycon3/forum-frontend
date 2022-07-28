@@ -18,7 +18,7 @@
       <input type="checkbox" id="configuracao" class="cabecalho__configuracao___botao">
       <label for="configuracao" class="cabecalho__configuracao___rotulo">
         <li class="cabecalho__configuracao___item">
-          Maycon Freitas do Rosario
+          {{ nome }}
           <span class="fa fa-caret-down"></span>
         </li>
       </label>
@@ -31,7 +31,7 @@
           </a>
         </li>
         <li class="lista__item">
-          <a routerLink="" class="lista__link">
+          <a routerLink="" class="lista__link" (click)="logout()">
             <span class="fa fa-power-off"></span>
             Sair
           </a>
