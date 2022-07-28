@@ -78,3 +78,24 @@
   text-decoration: none;
   color: var(--signin-texto-logo);
 }
+
+
+@media screen and (min-width: 768px) {
+
+  .menu {
+    max-width: 290px;
+  }
+
+  .menu__info {
+    height: 21%;
+  }
+
+  .menu__container {
+    height: 79%;
+  }
+}
+
+@media screen and (min-width:1024px) {
+
+
+}

@@ -1,12 +1,48 @@
 <header class="cabecalho" *ngIf="estaLogado()">
+
   <div class="cabecalho__menu">
     <a class="cabecalho__menu___icone fa fa-bars" (click)="menu.toggle()"></a>
     <app-menu #menu></app-menu>
   </div>
+
+  <div class="cabecalho__container">
+    <div class="cabecalho__opcoes">
+      <h1 class="cabecalho__logo">Qualyt Soft</h1>
+      <ul class="cabecalho__lista">
+        <li class="cabecalho__item"><a routerLink="" class="cabecalho__link">Categoria</a></li>
+        <li class="cabecalho__item"><a routerLink="" class="cabecalho__link">Curso</a></li>
+      </ul>
+    </div>
+
+    <ul class="cabecalho__configuracao">
+      <input type="checkbox" id="configuracao" class="cabecalho__configuracao___botao">
+      <label for="configuracao" class="cabecalho__configuracao___rotulo">
+        <li class="cabecalho__configuracao___item">
+          Maycon Freitas do Rosario
+          <span class="fa fa-caret-down"></span>
+        </li>
+      </label>
+
+      <ul class="lista-configuracao">
+        <li class="lista__item">
+          <a routerLink="" class="lista__link">
+            <span class="fa fa-user"></span>
+             Perfil
+          </a>
+        </li>
+        <li class="lista__item">
+          <a routerLink="" class="lista__link">
+            <span class="fa fa-power-off"></span>
+            Sair
+          </a>
+        </li>
+      </ul>
+    </ul>
+  </div>
 </header>
 <div class="banner" *ngIf="estaLogado()">
-  <div class="container">
-      <h2 class="banner-titulo">Forum Especial</h2>
+  <div class="banner__container">
+      <h2 class="banner__container___titulo">Forum Especial</h2>
   </div>
 </div>
 <ngx-spinner
