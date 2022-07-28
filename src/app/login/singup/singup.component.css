@@ -51,4 +51,8 @@
   .singup__cadastrar {
     justify-content: end;
   }
+
+  .singup__cadastrar___btn {
+    cursor: pointer;
+  }
 }

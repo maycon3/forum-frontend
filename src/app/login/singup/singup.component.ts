@@ -51,7 +51,13 @@ export class SingupComponent extends BaseFormComponent implements OnInit {
       nome: [null, [Validators.required]],
       sobreNome: [null, [Validators.required]],
       email: [null, [Validators.email,Validators.required]],
-      senha:[null,[Validators.required]],
+      senha:[null,
+        [
+          Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(10)
+        ]
+      ],
       perfilId: [2]
     });
   }

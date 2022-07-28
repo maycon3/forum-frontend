@@ -44,12 +44,7 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
   private createForm(): void {
     this.formulario = this.fb.group({
       email:[null,[Validators.required]],
-      senha:[null,
-              [
-                Validators.required,
-                Validators.minLength(5),
-                Validators.maxLength(10)
-              ]
+      senha:[null, [Validators.required]
             ]
     });
   }
