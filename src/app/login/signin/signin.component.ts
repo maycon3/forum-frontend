@@ -36,6 +36,8 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
         .subscribe(() => {
          this.router.navigate(['/forum','todos']);
         });
+    } else {
+      this.spinner.hide();
     }
   }
 
