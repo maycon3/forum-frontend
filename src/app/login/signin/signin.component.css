@@ -101,6 +101,8 @@
     padding-top: 6em;
   }
 
-
+  .signin__entrar___btn {
+    cursor: pointer;
+  }
 
 }

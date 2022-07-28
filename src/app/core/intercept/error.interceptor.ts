@@ -19,15 +19,23 @@ export class ErrorInterceptor implements HttpInterceptor {
         catchError((error: HttpErrorResponse) => {
           let erroMensagem: any;
           this.spinner.hide();
-          this.messageService.add({
-            severity:'error',
-            summary: 'Error',
-            detail: error.error.message
-          });
+          this.toast(error);
+          console.log(error);
           erroMensagem = error;
           return throwError(erroMensagem);
         })
       )
+  }
+
+  private toast(error:HttpErrorResponse ): void {
+    const erros: any[] = error.error.errors;
+    erros.forEach( erro => {
+      this.messageService.add({
+        severity: 'error',
+        summary: erro.campoNome ,
+        detail: erro.mensagem
+      });
+    })
   }
 
 }
