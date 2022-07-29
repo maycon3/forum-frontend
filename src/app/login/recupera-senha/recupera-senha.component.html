@@ -1,0 +1,17 @@
+<ng-container *ngIf="display$ | async as display">
+  <section [class.open]="display === 'open'">
+    <div class="modal__container">
+      <h1 class="modal__titulo" (click)="close()">Recupera Senha</h1>
+      <form>
+        <input type="email" class="input__form modal__input" placeholder="email@email.com">
+      </form>
+      <div class="modal__envio">
+        <button type="button" class="btn modal__envio___btn">Enviar</button>
+      </div>
+
+      <button type="button" class="modal__container___close">
+        <span class="fa fa-times"></span>
+      </button>
+    </div>
+  </section>
+</ng-container>

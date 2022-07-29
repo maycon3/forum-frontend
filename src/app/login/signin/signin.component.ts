@@ -6,6 +6,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 
 import { AuthService } from "src/app/core/auth/auth.service";
 import { BaseFormComponent } from "src/app/shared/directives/base-form/base-form.component";
+import { RecuperaSenhaService } from "../recupera-senha/recupera-senha.service";
 import { Credencias } from "./credencias";
 
 @Component({
@@ -19,7 +20,8 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
     private fb: UntypedFormBuilder,
     private authService: AuthService,
     private router: Router,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private recuperaService: RecuperaSenhaService
   ){
     super();
   }
@@ -39,6 +41,11 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
     } else {
       this.spinner.hide();
     }
+  }
+
+  recuperaSenha(): void {
+    console.log('clica')
+    this.recuperaService.open();
   }
 
   private createForm(): void {

@@ -8,12 +8,15 @@ import { SingupComponent } from "./singup/singup.component";
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 import { LoginRoutingModule } from "./login-routing.module";
 import { LoginService } from "./login.service";
+import { RecuperaSenhaComponent } from "./recupera-senha/recupera-senha.component";
+import { RecuperaSenhaService } from "./recupera-senha/recupera-senha.service";
 
 @NgModule({
   declarations: [
     LoginComponent,
     SigninComponent,
-    SingupComponent
+    SingupComponent,
+    RecuperaSenhaComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +26,8 @@ import { LoginService } from "./login.service";
     LoginRoutingModule
   ],
   providers:[
-    LoginService
+    LoginService,
+    RecuperaSenhaService
   ]
 })
 export class LoginModule { }

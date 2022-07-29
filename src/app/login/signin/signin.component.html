@@ -1,4 +1,3 @@
-
 <section class="signin">
   <div class="signin__icone">
     <span class="signin__icone___titulo fa fa-user-o"></span>
@@ -15,7 +14,7 @@
       <label for="lembrar">Lembrar conta</label>
     </div>
     <div class="signin__forgot">
-      <a href="#" class="signin__forgot___email">Esqueci Senha</a>
+      <a  class="signin__forgot___email" (click)="recuperaSenha()">Esqueci Senha</a>
     </div>
   </div>
 
@@ -27,3 +26,4 @@
     <a [routerLink]="['/login/singup']" class="signin__cadastro___singup">Cadastra-se</a>
   </div>
 </section>
+<app-recupera-senha></app-recupera-senha>
