@@ -1,36 +1,167 @@
-<section class="container mt-3">
-  <div class="d-flex justify-content-between mb-3">
-    <a class="btn btn-outline-primary" routerLink="/curso">
-      <i class="fa fa-arrow-left"></i> voltar
-    </a>
-    <button class="btn btn-primary" (click)="salvaCategoria()">Criar Categoria</button>
+<section class="categoria">
+  <div class="categoria__acoes">
+    <a type="button" routerLink="" class="btn btn-ligth categoria__acoes___retorno">voltar</a>
+    <button class="btn categoria__acoes___criar">Criar categoria</button>
   </div>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nome</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let categoria of listaCategoria$ |  async">
-            <td scope="row">{{categoria.id }}</td>
-            <td>{{ categoria.nome }}</td>
-            <td>
-              <div class="float-end">
-                <button class="btn btn-warning" (click)="salvaCategoria(categoria.id)">
-                  <i class="fa fa-pencil-square-o"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <ng-template #info>
-        <p>
-          Não há categoria cadastrada
+  <ul class="categoria__lista">
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
 
-        </p>
-      </ng-template>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+    <li class="categoria__lista___item">
+      <a routerLink="" class="categoria__lista___link">
+        Categoria
+      </a>
+    </li>
+  </ul>
+  <div class="categoria__paginacao">
+   <app-load-button></app-load-button>
+  </div>
 </section>

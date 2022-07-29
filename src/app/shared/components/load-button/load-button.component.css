@@ -1,0 +1,11 @@
+.load {
+  display: flex;
+  flex-direction: column;
+}
+
+.load__btn {
+  background-color: var(--cor-btn-load);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--cor-banco);
+}

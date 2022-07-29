@@ -7,7 +7,8 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
 
 @Component({
   selector: 'app-lista-categoria',
-  templateUrl:'./lista-categoria.component.html'
+  templateUrl:'./lista-categoria.component.html',
+  styleUrls: ['./lista-categoria.component.css']
 })
 export class ListaCategoriaComponent implements OnInit {
 

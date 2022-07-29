@@ -1,0 +1,38 @@
+.categoria__acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoria__acoes___retorno {
+  width: 100%;
+  margin-top: .3em;
+}
+
+.categoria__acoes___criar {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: var(--cor-btn-principal);
+  color: var(--cor-banco);
+  margin: .2em 0;
+}
+
+.categoria__lista {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 349px;
+}
+
+.categoria__lista___item {
+  margin:.1em 0;
+}
+
+.categoria__lista___link {
+  display: block;
+  padding: .7em;
+  background-color: var(--cor-banco);
+  text-decoration: none;
+  color: var( --cor-texto-principal);
+}
