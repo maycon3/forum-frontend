@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from "rxjs";
 export class RecuperaSenhaService {
 
   private display: BehaviorSubject<'open' | 'close'> =
-                   new BehaviorSubject<'open' | 'close'>('open');
+                   new BehaviorSubject<'open' | 'close'>('close');
 
 
   watch(): Observable<'open' | 'close'> {
