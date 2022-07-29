@@ -86,7 +86,7 @@
 @media screen and (min-width: 768px) {
 
   .signin {
-    margin: 20% 20%;
+    margin: 10% 20%;
   }
 
 
@@ -101,7 +101,8 @@
     padding-top: 6em;
   }
 
-  .signin__entrar___btn {
+  .signin__entrar___btn,
+  .signin__forgot___email {
     cursor: pointer;
   }
 
