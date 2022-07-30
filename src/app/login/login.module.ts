@@ -10,6 +10,7 @@ import { LoginRoutingModule } from "./login-routing.module";
 import { LoginService } from "./login.service";
 import { RecuperaSenhaComponent } from "./recupera-senha/recupera-senha.component";
 import { RecuperaSenhaService } from "./recupera-senha/recupera-senha.service";
+import { ForGotService } from "./recupera-senha/forgot.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RecuperaSenhaService } from "./recupera-senha/recupera-senha.service";
   ],
   providers:[
     LoginService,
-    RecuperaSenhaService
+    RecuperaSenhaService,
+    ForGotService
   ]
 })
 export class LoginModule { }

@@ -34,6 +34,12 @@ export class ErrorInterceptor implements HttpInterceptor {
         detail: error.error.message
       });
       return;
+    } else if(error.status == 404) {
+      this.messageService.add({
+        severity: 'error',
+        summary: '',
+        detail: error.error.msg
+      });
     }
     this.toast(error);
   }
