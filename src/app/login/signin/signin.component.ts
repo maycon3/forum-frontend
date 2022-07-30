@@ -44,7 +44,6 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
   }
 
   recuperaSenha(): void {
-    console.log('clica')
     this.recuperaService.open();
   }
 
