@@ -5,7 +5,7 @@
 }
 
 .signin__icone {
-  background-color: var(--cor-signin-principal);
+  background-color: var(--cor-principal);
   width: 22%;
   height: 51px;
   border-radius: 50%;
@@ -27,7 +27,7 @@
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  color: var(--cor-signin-principal);
+  color: var(--cor-principal);
   margin: .5em 0;
 }
 
@@ -45,13 +45,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--cor-signin-principal);
+  color: var(--cor-principal);
   margin-bottom: 1em;
 }
 
 .signin__forgot___email {
   text-decoration: none;
-  color: var(--cor-signin-principal);
+  color: var(--cor-principal);
 }
 
 .signin__entrar {

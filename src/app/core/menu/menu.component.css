@@ -3,10 +3,10 @@
   height: 100%;
   width: 90%;
   max-width: 200px;
-  background: var(--cor-banco);
+  background: var(--cor-branco);
   top: 0;
   left: -90%;
-  transition: left 0.3s ease-out;
+  transition: left 0.5s ease-out;
   z-index: 1;
 }
 
@@ -15,10 +15,12 @@
 }
 
 .menu__info {
-  background-color: var(--signin-texto-logo);
+  background-color: var(--cor-principal);
   height: 15%;
   position: relative;
 }
+
+/* terminar a refatoração do código css */
 
 .menu__logo {
   display: flex;
