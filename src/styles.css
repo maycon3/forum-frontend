@@ -9,6 +9,8 @@
   --cor-btn-principal: #093364;
   --cor-signin-principal: #093364;
   --cor-singup-principal: #093364;
+  --cor-recupera-senha-principal: #093364;
+  --cor-recupera-senha-close: #ff0000;
   --cor-form-input: #EEEEEE;
   --cor-erro: #ff0000;
   /* --cor-banco: #FFFFFF;
@@ -16,7 +18,6 @@
   --cor-fundo-botao-criar-categoria: #051932;
   --cor-text-botao-criar-categoria: #fff;
   --cor-btn-load: #2e8b57;
-  --cor-modal-close: #ff0000;
   --cor-texto-principal: #093364;
   --cor-logo-barra-navegacao: #fff;
   --cor-texto-barra-navegacao: rgba(255, 255, 255, .5);
