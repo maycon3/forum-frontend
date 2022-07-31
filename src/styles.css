@@ -1,11 +1,19 @@
 @import 'reset-css';
 
 :root {
-  --cor-banco: #FFFFFF;
+  --fonte-principal: "Poppins";
+  --fonte-segundaria: "josefin Sans";
+  --cor-branco: #FFFFFF;
+  --cor-de-fundo: #EBECEE;
+  --cor-barra-navegacao: #051932;
+  --cor-btn-principal: #093364;
+  --cor-signin-principal: #093364;
+  --cor-form-input: #EEEEEE;
+  --cor-erro: #ff0000;
+  /* --cor-banco: #FFFFFF;
   --cor-barra-navegacao: #051932;
   --cor-fundo-botao-criar-categoria: #051932;
   --cor-text-botao-criar-categoria: #fff;
-  --cor-btn-principal: #093364;
   --cor-btn-load: #2e8b57;
   --cor-modal-close: #ff0000;
   --cor-texto-principal: #093364;
@@ -22,18 +30,14 @@
   --cor-fundo-topico-filtro: #fff;
   --cor-body: #f9fbfd;
   --cor-texto-select: #576169;
-  --fonte-principal: "Poppins";
-  --fonte-segundaria: "josefin Sans";
-  --cor-de-fundo: #EBECEE;
   --signin-fundo: #FFFFFF;
   --signin-icone: #093364;
   --signin-texto-logo:#093364;
-  --signin-input: #EEEEEE;
   --cor-texto-btn: #FFFFFF;
   --cor-fundo-btn-light-principal: #FFFFFF;
   --cor-texto-btn-light-principal: #093364;
   --cor-fundo-btn: #093364;
-  --cor-erro: #ff0000;
+   */
 
 }
 
@@ -50,7 +54,7 @@
   padding: .7em;
   font-family: var(--fonte-principal);
   border: 1px solid transparent;
-  background-color: var(--signin-input);
+  background-color: var(--cor-form-input);
 }
 
 .input__form:focus {
@@ -68,9 +72,9 @@
 }
 
 .btn-ligth {
-  background-color: var(--cor-fundo-btn-light-principal);
-  color: var(--cor-texto-btn-light-principal);
-  border: 1px solid var(--cor-texto-btn-light-principal);;
+  background-color: var(--cor-branco);
+  color: var(--cor-btn-principal);
+  border: 1px solid var(--cor-btn-principal);
 }
 
 .nao-valido {

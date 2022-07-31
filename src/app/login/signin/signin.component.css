@@ -1,11 +1,11 @@
 .signin {
-  background-color: var(--signin-fundo);
+  background-color: var(--cor-branco);
   margin: 20% auto;
   padding: 2em 1em;
 }
 
 .signin__icone {
-  background-color: var(--signin-icone);
+  background-color: var(--cor-signin-principal);
   width: 22%;
   height: 51px;
   border-radius: 50%;
@@ -20,14 +20,14 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
-  color: #fff;
+  color: var(--cor-branco);
 }
 
 .signin__titulo {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  color: var(--signin-texto-logo);
+  color: var(--cor-signin-principal);
   margin: .5em 0;
 }
 
@@ -45,13 +45,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--signin-texto-logo);
+  color: var(--cor-signin-principal);
   margin-bottom: 1em;
 }
 
 .signin__forgot___email {
   text-decoration: none;
-  color: var(--signin-texto-logo);
+  color: var(--cor-signin-principal);
 }
 
 .signin__entrar {
@@ -67,8 +67,8 @@
   font-family: var(--fonte-principal);
   font-weight: 500;
   border: 1px solid transparent;
-  background-color: var(--signin-texto-logo);
-  color: #fff;
+  background-color: var(--cor-btn-principal);
+  color: var(--cor-branco);
 }
 
 .signin__cadastro {
@@ -79,8 +79,8 @@
 .signin__cadastro___singup {
   text-decoration: none;
   padding: .4em 1em;
-  background-color: var(--signin-texto-logo);
-  color: #fff;
+  background-color: var(--cor-btn-principal);
+  color: var(--cor-branco);
 }
 
 @media screen and (min-width: 768px) {
