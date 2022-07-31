@@ -1,5 +1,5 @@
 .singup {
-  background-color: var(--signin-fundo);
+  background-color: var(--cor-branco);
   margin: 20% auto;
   padding: 2em 1em;
 }
@@ -7,7 +7,7 @@
 .singup__titulo {
   font-size: 18px;
   font-weight: 700;
-  color: var(--signin-texto-logo);
+  color: var(--cor-singup-principal);
   text-align: center;
   margin-bottom: 2em;
 }
@@ -26,8 +26,8 @@
 }
 
 .singup__cadastrar___btn {
-  background-color: var(--cor-fundo-btn);
-  color: var(--cor-banco);
+  background-color: var(--cor-btn-principal);
+  color: var(--cor-branco);
   margin: 1em 0;
 }
 
@@ -54,5 +54,11 @@
 
   .singup__cadastrar___btn {
     cursor: pointer;
+  }
+
+  .btn-ligth:hover {
+    background-color: var(--cor-btn-principal);
+    color: var(--cor-branco);
+    border: 1px solid var(--cor-btn-principal);
   }
 }
