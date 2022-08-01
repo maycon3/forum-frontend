@@ -41,7 +41,7 @@
     font-size: 25px;
     font-family: var(--fonte-segundaria);
     font-weight: 700;
-    color: var(--cor-banco);
+    color: var(--cor-branco);
     margin-right: 2em;
   }
 
@@ -58,7 +58,7 @@
   .cabecalho__configuracao___item {
     font-weight: 300;
     text-decoration: none;
-    color: var(--cor-banco);
+    color: var(--cor-branco);
     cursor: pointer;
   }
 
@@ -82,12 +82,12 @@
   .lista-configuracao {
     position: absolute;
     top: 100%;
-    background-color: var(--cor-banco);
+    background-color: var(--cor-branco);
     width: 20%;
   }
 
   .lista__item {
-    color: var(--signin-texto-logo);
+    color: var(--cor-principal);
   }
 
   .lista__link {
@@ -95,17 +95,17 @@
     padding: 1em;
     display: inline-block;
     text-decoration: none;
-    color: var(--signin-texto-logo);
+    color: var(--cor-principal);
   }
 
   .lista__link:hover {
-    background-color: var(--signin-texto-logo);
-    color: var(--cor-banco);
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
   }
 
   .banner {
     display: block;
-    background-color: var(--signin-texto-logo);
+    background-color: var(--cor-principal);
     height: 72px;
   }
 
@@ -116,7 +116,7 @@
   .banner__container___titulo {
     font-size: 20px;
     font-weight: 700;
-    color: var(--cor-banco);
+    color: var(--cor-branco);
   }
 
 }

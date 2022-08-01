@@ -20,8 +20,6 @@
   position: relative;
 }
 
-/* terminar a refatoração do código css */
-
 .menu__logo {
   display: flex;
   justify-content: space-between;
@@ -31,7 +29,7 @@
 
 .menu__info___logo {
   font-size: 19px;
-  color: var(--cor-banco);
+  color: var(--cor-branco);
   font-family: var(--fonte-segundaria);
   font-weight: 700;
 }
@@ -44,13 +42,13 @@
   position: absolute;
   font-size: 13px;
   font-weight: 300;
-  color:var(--cor-banco);
+  color:var(--cor-branco);
   padding: .3em;
   bottom: 0;
 }
 
 .menu__info___btn {
-  color: var(--cor-banco);
+  color: var(--cor-branco);
   font-size: 20px;
 }
 
@@ -78,7 +76,7 @@
   display: block;
   padding: .5em;
   text-decoration: none;
-  color: var(--signin-texto-logo);
+  color: var(--cor-principal);
 }
 
 
