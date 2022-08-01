@@ -15,23 +15,24 @@
   font-weight: 300;
   background-color: var(--cor-btn-principal);
   color: var(--cor-branco);
-  margin: .2em 0;
+  margin: .5em 0;
 }
 
 .categoria__lista {
   display: flex;
   flex-direction: column;
   overflow: auto;
-  height: 349px;
+  /* height: 647px; */
+  height: 78vh;
 }
 
 .categoria__lista___item {
-  margin:.1em 0;
+  margin:.2em 0;
 }
 
 .categoria__lista___link {
   display: block;
-  padding: .7em;
+  padding: 1em;
   background-color: var(--cor-branco);
   text-decoration: none;
   color: var( --cor-principal);
