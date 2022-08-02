@@ -1,1 +1,69 @@
+section {
+  display: none;
+  opacity: 0;
+}
 
+.open {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms ease-in;
+}
+
+.modal-categoria {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 95%;
+  background: var(--cor-branco);
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-categoria__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var( --cor-principal);
+  height: 35px;
+  padding: .5em;
+  margin-bottom: 1em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.modal-categoria__titlulo {
+  color: var(--cor-branco);
+  font-weight: 300;
+}
+
+.modal-categoria___icone {
+  color: var(--cor-branco);
+}
+
+.modal-categoria__form {
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+.input__form {
+  width: 100%;
+  font-size: 17px;
+}
+
+.modal-categoria__salva {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-categoria__btn {
+  background-color: var(--cor-btn-principal);
+  color: var(--cor-branco);
+}

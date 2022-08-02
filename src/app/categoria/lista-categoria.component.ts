@@ -3,6 +3,7 @@ import { Observable } from "rxjs";
 
 import { Categoria } from "./categoria";
 import { CategoriaService } from "./categoria.service";
+import { Incializador } from "./modal-categoria/inicializador";
 import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service";
 
 @Component({
@@ -14,6 +15,7 @@ export class ListaCategoriaComponent implements OnInit {
 
   listaCategoria$ = new Observable<Categoria[]>();
 
+
   constructor(
     private categoriaService: CategoriaService,
     private modalService: ModalCategoriaService
@@ -21,13 +23,15 @@ export class ListaCategoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.listaCategoria$ = this.categoriaService.getAll();
+    this.modalService.getResultado()
+      .subscribe(() => {
+        this.listaCategoria$ = this.categoriaService.getAll();
+      });
   }
 
-  salvaCategoria(id?:number): void {
-      this.modalService.abreModal(id)
-        .subscribe(()=> {
-          this.listaCategoria$ = this.categoriaService.getAll();
-        })
+  abreModal(categoria?: Categoria): void {
+    this.modalService.open(categoria);
   }
+
 
 }

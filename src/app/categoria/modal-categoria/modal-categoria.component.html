@@ -1,0 +1,27 @@
+<ng-container *ngIf="display$ | async as display">
+  <section [class.open]="display.watch === 'open'">
+    <div class="modal-categoria">
+      <header class="modal-categoria__cabecalho">
+        <h2 class="modal-categoria__titlulo">Categoria</h2>
+        <span class="modal-categoria___icone fa fa-times" (click)="close()"></span>
+      </header>
+      <form [formGroup]="categoriaForm">
+        <div class="modal-categoria__form">
+          <input
+            type="text"
+            formControlName="nome"
+            class="input__form"
+            placeholder="Categoria">
+        </div>
+      </form>
+      <div class="modal-categoria__salva">
+        <button
+          type="button"
+          class="btn modal-categoria__btn"
+          (click)="salvar()">
+          Salvar
+        </button>
+      </div>
+    </div>
+  </section>
+</ng-container>

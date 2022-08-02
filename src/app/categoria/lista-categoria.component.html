@@ -1,68 +1,13 @@
+<app-modal-categoria></app-modal-categoria>
 <section class="categoria">
   <div class="categoria__acoes">
-    <a type="button" routerLink="" class="btn btn-ligth categoria__acoes___retorno">voltar</a>
-    <button class="btn categoria__acoes___criar">Criar categoria</button>
+    <a type="button" routerLink="/forum/todos" class="btn btn-ligth categoria__acoes___retorno">voltar</a>
+    <button class="btn categoria__acoes___criar" (click)="abreModal()">Criar categoria</button>
   </div>
-  <ul class="categoria__lista">
+  <ul class="categoria__lista" *ngFor="let categoria of listaCategoria$ | async">
     <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
-      </a>
-    </li>
-    <li class="categoria__lista___item">
-      <a routerLink="" class="categoria__lista___link">
-        Categoria
+      <a class="categoria__lista___link" (click)="abreModal(categoria)">
+        {{ categoria.nome }}
       </a>
     </li>
 
