@@ -4,14 +4,36 @@
     <a type="button" routerLink="/forum/todos" class="btn btn-ligth categoria__acoes___retorno">voltar</a>
     <button class="btn categoria__acoes___criar" (click)="abreModal()">Criar categoria</button>
   </div>
-  <ul class="categoria__lista" *ngFor="let categoria of listaCategoria$ | async">
+
+  <ul class="categoria__lista" *ngFor="let categoria of categorias$ | async">
     <li class="categoria__lista___item">
       <a class="categoria__lista___link" (click)="abreModal(categoria)">
         {{ categoria.nome }}
       </a>
     </li>
-
   </ul>
+
+  <div class="categoria__table">
+    <table class="table">
+      <thead class="table__cabecalho">
+        <th class="table__cabecalho___item">ID</th>
+        <th class="table__cabecalho___item">Nome</th>
+        <th class="table__cabecalho___item"></th>
+      </thead>
+      <tbody class="table__corpo">
+        <tr class="table__corpo__linha" *ngFor="let categoria of categorias$ | async ">
+          <td class="table__corpo___item">{{ categoria.id }}</td>
+          <td class="table__corpo___item">{{ categoria.nome }}</td>
+          <td class="table__corpo___item table__acao">
+            <button class="table___btn">
+              <span class="btn__icone fa fa-pencil-square-o"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="categoria__paginacao">
    <app-load-button></app-load-button>
   </div>

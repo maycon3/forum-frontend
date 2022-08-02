@@ -13,7 +13,7 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
 })
 export class ListaCategoriaComponent implements OnInit {
 
-  listaCategoria$ = new Observable<Categoria[]>();
+  categorias$ = new Observable<Categoria[]>();
 
 
   constructor(
@@ -22,10 +22,10 @@ export class ListaCategoriaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.listaCategoria$ = this.categoriaService.getAll();
+    this.categorias$ = this.categoriaService.getAll();
     this.modalService.getResultado()
       .subscribe(() => {
-        this.listaCategoria$ = this.categoriaService.getAll();
+        this.categorias$ = this.categoriaService.getAll();
       });
   }
 
