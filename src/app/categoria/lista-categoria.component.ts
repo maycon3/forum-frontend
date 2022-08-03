@@ -1,9 +1,8 @@
-import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Observable, Subscription } from "rxjs";
 
 import { Categoria } from "./categoria";
 import { CategoriaService } from "./categoria.service";
-import { Incializador } from "./modal-categoria/inicializador";
 import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service";
 
 @Component({
@@ -11,10 +10,10 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
   templateUrl:'./lista-categoria.component.html',
   styleUrls: ['./lista-categoria.component.css']
 })
-export class ListaCategoriaComponent implements OnInit {
+export class ListaCategoriaComponent implements OnInit, OnDestroy {
 
   categorias$ = new Observable<Categoria[]>();
-
+  inscricao: Subscription;
 
   constructor(
     private categoriaService: CategoriaService,
@@ -23,18 +22,21 @@ export class ListaCategoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.categorias$ = this.categoriaService.getAll();
-    this.categorias$.subscribe(cat => console.log(cat))
-    this.modalService.getResultado()
-      .subscribe(() => {
-        console.log('passei')
-        this.categorias$.subscribe(cat => console.log(cat))
-        this.categorias$ = this.categoriaService.getAll();
-      });
+    this.atualizaLista();
   }
 
   abreModal(categoria?: Categoria): void {
     this.modalService.open(categoria);
   }
 
+  private atualizaLista(): void {
+    this.inscricao = this.modalService.getResultado()
+    .subscribe(() => {
+      this.categorias$ = this.categoriaService.getAll();
+    });
+  }
 
+  ngOnDestroy(): void {
+    this.inscricao.unsubscribe();
+  }
 }

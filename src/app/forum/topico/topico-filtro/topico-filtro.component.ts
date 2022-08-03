@@ -7,7 +7,6 @@ import { Subscription, tap } from "rxjs";
 import { Categoria } from "src/app/categoria/categoria";
 import { CategoriaService } from "src/app/categoria/categoria.service";
 import { CursoService } from "src/app/curso/curso.service";
-import { CursoPage } from "src/app/curso/lista-curso/modal-curso/curso";
 import { BaseFormComponent } from "src/app/shared/directives/base-form/base-form.component";
 import { TipoRota } from "./tipo-rota";
 
@@ -20,7 +19,6 @@ export class TopicoFiltroComponent extends
         BaseFormComponent implements OnInit, OnDestroy {
 
   $categorias = this.categoriaService.getAll();
-  cursos: CursoPage[] = [];
   inscricoes: Subscription;
   private catStatus = '';
   private rota = 'todos';
