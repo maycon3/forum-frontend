@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
-  height: 73vh;
+  height: 61vh;
 }
 
 .categoria__lista___item {
@@ -127,11 +127,29 @@
     background: #eee;
 }
 
+  .lista-vazia {
+    text-align: center;
+  }
+
+  .info-texto {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
   /* ***** */
 
   .categoria__paginacao {
     display: none;
   }
+}
 
+@media screen and (min-width: 1024px) {
 
+  .categoria__table {
+    padding: 2em;
+  }
+
+  .table___btn {
+    cursor: pointer;
+  }
 }

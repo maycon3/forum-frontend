@@ -39,7 +39,7 @@
   padding: .7em;
   font-size: 16px;
   font-family: var(--fonte-principal);
-  font-weight: 500;
+  font-weight: 300;
   border: 1px solid transparent;
   text-decoration: none;
   text-align: center;
@@ -53,4 +53,17 @@
 
 .nao-valido {
   border: 1px solid var(--cor-erro);
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .btn {
+    cursor: pointer;
+  }
+
+  .btn-ligth:hover {
+    background-color: var(--cor-btn-principal);
+    color: var(--cor-branco);
+  }
 }

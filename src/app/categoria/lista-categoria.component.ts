@@ -23,8 +23,11 @@ export class ListaCategoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.categorias$ = this.categoriaService.getAll();
+    this.categorias$.subscribe(cat => console.log(cat))
     this.modalService.getResultado()
       .subscribe(() => {
+        console.log('passei')
+        this.categorias$.subscribe(cat => console.log(cat))
         this.categorias$ = this.categoriaService.getAll();
       });
   }

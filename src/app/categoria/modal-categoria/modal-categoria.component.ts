@@ -16,7 +16,7 @@ import { ModalCategoriaService } from './modal-categoria.service';
 export class ModalCategoriaComponent implements OnInit {
 
   resultado: Subject<void>;
-  display$: Observable<Incializador>;
+  display$: Observable<Incializador | null>;
   categoriaForm: FormGroup;
 
   constructor(
@@ -38,12 +38,14 @@ export class ModalCategoriaComponent implements OnInit {
       this.categoriaService.post(categoria)
         .subscribe(() => {
           this.modalService.setResultado();
+          this.limpaCampo();
           this.close();
         });
     }
   }
 
   close(): void {
+    this.limpaCampo();
     this.modalService.close();
   }
 
@@ -56,6 +58,10 @@ export class ModalCategoriaComponent implements OnInit {
 
   private populaCategoria(dados: Categoria) {
     this.categoriaForm.patchValue({...dados});
+  }
+
+  private limpaCampo(): void {
+    this.categoriaForm.reset();
   }
 
   private editaCategoria(): void {

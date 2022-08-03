@@ -67,3 +67,28 @@ section {
   background-color: var(--cor-btn-principal);
   color: var(--cor-branco);
 }
+
+@media screen and (min-width: 768px) {
+
+  .modal-categoria {
+    width: 60%;
+  }
+
+}
+
+@media screen and (min-width:1024px) {
+
+  .modal-categoria {
+    width: 40%;
+  }
+
+  .modal-categoria__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .input__form {
+    width: 70%;
+  }
+
+}

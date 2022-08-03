@@ -18,6 +18,7 @@ export class ModalCategoriaService {
 
   close(): void {
     this.inicial.watch = 'close';
+    this.inicial.categoria = {} as Categoria;
     this.display$.next(this.inicial);
   }
 
