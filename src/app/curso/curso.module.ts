@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { RoutingCursoModule } from "./routing-curso.module";
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
+import { LoadButtonModule } from "../shared/components/load-button/load-button.module";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
     FormsModule,
     ReactiveFormsModule,
     ErroMsgModule,
+    LoadButtonModule,
     RoutingCursoModule
   ],
   providers:[

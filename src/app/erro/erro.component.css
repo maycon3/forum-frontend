@@ -1,0 +1,15 @@
+.erro {
+  height: 100vh;
+}
+
+.erro__imagem {
+  background-image: url('../../assets/image/erro.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  width: 100%;
+  height: 90%;
+
+}
+
+

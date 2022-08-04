@@ -30,6 +30,11 @@ const routes: Routes = [
     path:'curso',
     loadChildren:()=> import('./curso/curso.module').then((m)=> m.CursoModule),
     canActivate:[AuthGuard]
+  },
+  {
+    path:'**',
+    loadChildren: () => import('./erro/erro.module').then((m)=> m.ErroModule),
+    canActivate:[AuthGuard]
   }
 ];
 
