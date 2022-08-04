@@ -1,7 +1,7 @@
 <section class="curso">
   <div class="curso__navegacao">
-    <a type="button" class="btn btn-ligth curso__navegacao___ligth">voltar</a>
-    <button type="button" class="btn curso__navegacao___btn">Criar Curso</button>
+    <a type="button" class="btn btn-ligth acoes">voltar</a>
+    <button type="button" class="btn curso__navegacao___btn acoes">Criar Curso</button>
   </div>
   <ul class="curso__lista">
     <li class="curso__lista___item">
@@ -9,52 +9,32 @@
         Java
       </a>
     </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
-    <li class="curso__lista___item">
-      <a routerLink="" class="curso__lista___link" >
-        Java
-      </a>
-    </li>
   </ul>
+
+  <div class="fundo__table">
+    <table class="table">
+      <thead class="table__cabecalho">
+        <th class="table__cabecalho___item">ID</th>
+        <th class="table__cabecalho___item">Categoria</th>
+        <th class="table__cabecalho___item">Nome Curso</th>
+        <th class="table__cabecalho___item"></th>
+      </thead>
+      <tbody class="table__corpo">
+        <tr class="table__corpo__linha">
+          <td class="table__corpo___item">1</td>
+          <td class="table__corpo___item">Programação</td>
+          <td class="table__corpo___item">Java</td>
+          <td class="table__corpo___item table__acao">
+            <button class="table___btn"><span class="fa fa-pencil-square-o"></span></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="curso__paginacao___prime">
+      <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
+    </div>
+  </div>
   <div class="curso__paginacao">
     <app-load-button></app-load-button>
   </div>

@@ -16,7 +16,7 @@
       </li>
     </ul>
 
-    <div class="categoria__table">
+    <div class="fundo__table">
       <table class="table" *ngIf="vm.categorias; else listaVazia">
         <thead class="table__cabecalho">
           <th class="table__cabecalho___item">ID</th>
@@ -29,7 +29,7 @@
               <td class="table__corpo___item">{{ categoria.nome }}</td>
               <td class="table__corpo___item table__acao">
                 <button class="table___btn" title="Edição de Categoria" (click)="abreModal(categoria)">
-                  <span class="btn__icone fa fa-pencil-square-o"></span>
+                  <span class="fa fa-pencil-square-o"></span>
                 </button>
               </td>
             </tr>

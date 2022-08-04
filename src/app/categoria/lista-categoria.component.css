@@ -43,10 +43,6 @@
   width: 100%;
 }
 
-.categoria__table {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
 
   .categoria {
@@ -71,62 +67,6 @@
     display: none;
   }
 
-  /* Aqui ficara o código da tabela*/
-
-  .categoria__table {
-    display: block;
-    background-color: var(--cor-branco);
-    margin-top: 2em;
-    padding: 1em;
-    border-radius: 8px;
-  }
-
-  .table {
-    width: 100%;
-    text-align: center;
-  }
-
-  .table__cabecalho {
-    background-color: var(--cor-principal);
-  }
-
-  .table__cabecalho___item {
-    padding: .3em;
-    color: var(--cor-branco);
-    font-size: 14px;
-  }
-
-  .table__cabecalho___item:first-child {
-      border-radius: 8px 0 0 8px;
-  }
-
-  .table__cabecalho___item:last-child {
-    border-radius: 0 8px 8px 0;
-  }
-
-  .table__corpo___item {
-    font-size: 14px;
-    padding: .3em;
-  }
-
-  .table__acao {
-    text-align: end;
-  }
-
-  .table___btn {
-    background-color: var(--cor-edicao);
-    border: 1px solid transparent;
-    padding: .5em;
-  }
-
-  .btn__icone {
-    font-weight: 700;
-  }
-
-  .table__corpo__linha:nth-child(even) td{
-    background: #eee;
-}
-
   .lista-vazia {
     text-align: center;
   }
@@ -135,8 +75,6 @@
     font-size: 18px;
     font-weight: 700;
   }
-
-  /* ***** */
 
   .categoria__paginacao {
     display: none;

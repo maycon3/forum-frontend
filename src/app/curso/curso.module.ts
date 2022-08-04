@@ -2,6 +2,8 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+import {PaginatorModule} from 'primeng/paginator';
+
 import { RoutingCursoModule } from "./routing-curso.module";
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 import { LoadButtonModule } from "../shared/components/load-button/load-button.module";
@@ -15,6 +17,7 @@ import { ListaCursoComponent } from "./lista-curso/lista-curso.component";
     ReactiveFormsModule,
     ErroMsgModule,
     LoadButtonModule,
+    PaginatorModule,
     RoutingCursoModule
   ],
   providers:[

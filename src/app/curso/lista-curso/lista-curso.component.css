@@ -6,6 +6,7 @@
 
 .curso__navegacao___btn {
   background-color: var(--cor-btn-principal);
+  font-weight: 300;
   color: var(--cor-branco);
   margin-top: .5em;
 }
@@ -29,9 +30,75 @@
   padding: 1.2em;
 }
 
-
 .curso__paginacao {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.curso__paginacao___prime {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .curso {
+    padding: .5em;
+  }
+
+  .curso__navegacao {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .curso__navegacao___btn {
+    font-size: 14px;
+  }
+
+  .acoes {
+    width: 20%;
+  }
+
+  .curso__lista {
+    display: none;
+  }
+
+  .curso__paginacao___prime {
+    display: block;
+  }
+
+  :host /deep/ .p-link  {
+    font-size: 12px;
+  }
+
+  :host /deep/ .p-paginator .p-paginator-pages .p-paginator-page {
+    min-width: 2rem;
+    height: 2rem;
+  }
+
+  :host /deep/ .p-paginator .p-paginator-prev {
+    min-width: 2rem;
+    height: 2rem;
+  }
+
+  :host /deep/ .p-paginator .p-paginator-last {
+    min-width: 2rem;
+    height: 2rem;
+  }
+
+  :host /deep/ .p-paginator .p-paginator-next {
+    min-width: 2rem;
+    height: 2rem;
+  }
+
+  :host /deep/ .p-paginator .p-paginator-first  {
+      min-width: 2rem;
+      height: 2em;
+    }
+
+  .curso__paginacao {
+    display: none;
+  }
+
 }
