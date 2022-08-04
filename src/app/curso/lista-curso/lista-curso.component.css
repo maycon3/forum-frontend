@@ -1,0 +1,37 @@
+.curso__navegacao {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.curso__navegacao___btn {
+  background-color: var(--cor-btn-principal);
+  color: var(--cor-branco);
+  margin-top: .5em;
+}
+
+.curso__lista {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 70vh;
+}
+
+.curso__lista___item {
+  margin: .2em 0;
+}
+
+.curso__lista___link {
+  display: block;
+  background-color: var(--cor-branco);
+  color: var(--cor-principal);
+  text-decoration: none;
+  padding: 1.2em;
+}
+
+
+.curso__paginacao {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
