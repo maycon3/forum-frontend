@@ -1,4 +1,4 @@
-import { OverlayModule } from '@angular/cdk/overlay';
+// import { OverlayModule } from '@angular/cdk/overlay';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -21,7 +21,7 @@ import { CoreModule } from './core/core.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    OverlayModule,
+    // OverlayModule,
     CoreModule,
     //HttpClientInMemoryWebApiModule.forRoot(AppData),
     AppRoutingModule

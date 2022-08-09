@@ -7,7 +7,7 @@
   <div class="modal-curso__group">
     <select class="select__form" formControlName="categoriaId">
       <option value="">Selecione a Categoria</option>
-      <option *ngFor="let categoria of categorias$ | async" [ngValeu]="categoria.id">
+      <option *ngFor="let categoria of categorias$ | async" [ngValue]="categoria.id">
         {{ categoria.nome }}
       </option>
     </select>

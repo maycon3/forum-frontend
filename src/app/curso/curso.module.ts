@@ -11,6 +11,7 @@ import { ListaCursoComponent } from "./lista-curso/lista-curso.component";
 import { ModalCursoComponent } from "./modal-curso/modal-curso.component";
 import { CursoService } from "./curso.service";
 import { CategoriaModule } from "../categoria/categoria.module";
+import { ModalModule } from "../shared/components/modal/modal.module";
 
 @NgModule({
   declarations: [ListaCursoComponent,ModalCursoComponent],
@@ -21,6 +22,7 @@ import { CategoriaModule } from "../categoria/categoria.module";
     ErroMsgModule,
     LoadButtonModule,
     PaginatorModule,
+    ModalModule,
     RoutingCursoModule,
     CategoriaModule
   ],

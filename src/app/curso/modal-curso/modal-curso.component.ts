@@ -1,10 +1,11 @@
 import { Component, Inject, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Subject } from "rxjs";
 
 import { CategoriaService } from "src/app/categoria/categoria.service";
 
-import { DialogRef } from "src/app/core/modalDialog/dialog-ref";
-import { DIALOG_DATA } from "src/app/core/modalDialog/dialog-token";
+import { DialogRef } from "src/app/shared/components/modal/modalDialog/dialog-ref";
+import { DIALOG_DATA } from "src/app/shared/components/modal/modalDialog/dialog-token";
 import { Curso } from "../curso";
 import { CursoService } from "../curso.service";
 
@@ -17,6 +18,7 @@ export class ModalCursoComponent implements OnInit {
 
   modalCursoForm: FormGroup;
   categorias$ = this.categoriaService.getAll();
+  private resultado = new Subject<void>();
 
   constructor(
     private dialogRef: DialogRef,
