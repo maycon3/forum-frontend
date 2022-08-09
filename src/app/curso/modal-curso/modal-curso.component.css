@@ -12,6 +12,8 @@
   background-color: var(--cor-principal);
   color: var(--cor-branco);
   margin-bottom: 1em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .modal-curso__group {
