@@ -4,9 +4,9 @@
     <button type="button" class="btn curso__navegacao___btn acoes" (click)="open()">Criar Curso</button>
   </div>
   <ul class="curso__lista">
-    <li class="curso__lista___item">
+    <li class="curso__lista___item" *ngFor="let curso of cursos">
       <a routerLink="" class="curso__lista___link" >
-        Java
+        {{ curso.nomeCurso }}
       </a>
     </li>
   </ul>
@@ -35,7 +35,13 @@
       <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
     </div>
   </div>
-  <div class="curso__paginacao">
-    <app-load-button></app-load-button>
+  <div class="curso__paginacao" *ngIf="temMais; else listaCurso">
+    <app-load-button (click)="maisCursos()"></app-load-button>
   </div>
 </section>
+
+<ng-template #listaCurso>
+  <div class="lista-vazia">
+    <p>Não há mais curso </p>
+  </div>
+</ng-template>

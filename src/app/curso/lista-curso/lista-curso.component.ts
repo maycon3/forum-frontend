@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DialogService } from "src/app/core/modalDialog/dialog.service";
 import { Curso } from "../curso";
+import { CursoService } from "../curso.service";
 import { ModalCursoComponent } from "../modal-curso/modal-curso.component";
 
 @Component({
@@ -10,14 +11,34 @@ import { ModalCursoComponent } from "../modal-curso/modal-curso.component";
 })
 export class ListaCursoComponent implements OnInit {
 
-  constructor(private dialog: DialogService) { }
+  cursos: Curso[];
+  contador = 0;
+  temMais = true;
+
+  constructor(
+    private dialog: DialogService,
+    private cursoService: CursoService
+  ) { }
 
   ngOnInit(): void {
+    this.cursoService.getPage(this.contador).subscribe(res =>{
+      this.cursos = res.content;
+    });
   }
 
   open(): void {
     const dialogRef = this.dialog.open(ModalCursoComponent);
     dialogRef.afterClosed().subscribe(() => {});
+  }
+
+  maisCursos(): void {
+   this.cursoService.getPage(++this.contador)
+      .subscribe(resp => {
+        this.cursos = this.cursos.concat(resp.content);
+        if(!resp.content.length) {
+          this.temMais = false;
+        }
+      });
   }
 
 }

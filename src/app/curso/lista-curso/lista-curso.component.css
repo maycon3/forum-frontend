@@ -36,6 +36,18 @@
   width: 100%;
 }
 
+.lista-vazia {
+  position: absolute;
+  bottom: 0;
+  padding: .7em;
+  width: 100%;
+}
+
+.lista-vazia p {
+  text-align: center;
+  padding: .3em;
+}
+
 .curso__paginacao___prime {
   display: none;
 }
