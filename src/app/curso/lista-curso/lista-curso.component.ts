@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { DialogService } from "src/app/core/modalDialog/dialog.service";
+import { Curso } from "../curso";
 import { ModalCursoComponent } from "../modal-curso/modal-curso.component";
 
 @Component({
@@ -14,13 +15,9 @@ export class ListaCursoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  open() {
-    const teste = 'Desenvolvedor Full Stack';
-    const dialogRef = this.dialog.open(ModalCursoComponent,{data: teste});
-    dialogRef.afterClosed().subscribe(() => {
-      // Subscription runs after the dialog closes
-      console.log('Dialog closed!');
-    });
+  open(): void {
+    const dialogRef = this.dialog.open(ModalCursoComponent);
+    dialogRef.afterClosed().subscribe(() => {});
   }
 
 }

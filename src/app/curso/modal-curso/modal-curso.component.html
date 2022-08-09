@@ -3,15 +3,15 @@
    <h1 class="modal__cabecalho___titulo">Curso</h1>
    <span class="modal__cabecalho___icone fa fa-times" (click)="close()"></span>
  </header>
- <form>
+ <form [formGroup]="modalCursoForm">
   <div class="modal-curso__group">
-    <select class="select__form">
+    <select class="select__form" formControlName="categoriaId">
       <option value="">Selecione a Categoria</option>
     </select>
   </div>
   <div class="modal-curso__group">
     <label for="curso">Curso</label>
-    <input type="text" id="curso" class="modal-curso__form input__form">
+    <input type="text" formControlName="nomeCurso" id="curso" class="modal-curso__form input__form">
   </div>
  </form>
  <div class="modal-curso__acoes">
