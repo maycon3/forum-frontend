@@ -1,5 +1,35 @@
 .modal-curso {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+}
+
+.modal__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em .5em;
+  width: 100%;
+  background-color: var(--cor-principal);
+  color: var(--cor-branco);
+  margin-bottom: 1em;
+}
+
+.modal-curso__group {
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+
+.modal-curso__form {
+  width: 100%;
+}
+
+.modal-curso__acoes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.modal-curso__acoes___btn {
+  background-color: var(--cor-btn-principal);
+  color: var(--cor-branco);
 }
