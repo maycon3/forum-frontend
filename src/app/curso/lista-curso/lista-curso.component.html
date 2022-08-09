@@ -5,7 +5,7 @@
   </div>
   <ul class="curso__lista">
     <li class="curso__lista___item" *ngFor="let curso of cursos">
-      <a routerLink="" class="curso__lista___link" >
+      <a class="curso__lista___link" (click)="open(curso)" >
         {{ curso.nomeCurso }}
       </a>
     </li>

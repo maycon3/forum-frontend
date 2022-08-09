@@ -25,8 +25,8 @@ export class ListaCursoComponent implements OnInit {
     this.buscaListagem();
   }
 
-  open(): void {
-    const dialogRef = this.dialog.open(ModalCursoComponent);
+  open(curso?: Curso): void {
+    const dialogRef = this.dialog.open(ModalCursoComponent,{data: curso});
     dialogRef.afterClosed().subscribe(() => {
       this.buscaListagem();
     });

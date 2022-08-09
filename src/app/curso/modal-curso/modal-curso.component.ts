@@ -30,8 +30,8 @@ export class ModalCursoComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
-    const curso = this.data as Curso;
-    if(curso != undefined || curso != null) {
+    const curso = this.data.data as Curso;
+    if(curso != undefined) {
       this.populaCurso(curso);
     }
   }
