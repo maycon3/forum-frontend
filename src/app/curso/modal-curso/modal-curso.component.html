@@ -7,6 +7,9 @@
   <div class="modal-curso__group">
     <select class="select__form" formControlName="categoriaId">
       <option value="">Selecione a Categoria</option>
+      <option *ngFor="let categoria of categorias$ | async" [ngValeu]="categoria.id">
+        {{ categoria.nome }}
+      </option>
     </select>
   </div>
   <div class="modal-curso__group">
@@ -15,6 +18,8 @@
   </div>
  </form>
  <div class="modal-curso__acoes">
-  <button type="button" class="btn modal-curso__acoes___btn">salvar</button>
+  <button type="button" class="btn modal-curso__acoes___btn" (click)="salva()">
+    salvar
+  </button>
  </div>
 </section>

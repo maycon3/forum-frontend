@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 
 
 import { ApiService } from '../core/services/api.service';
-import { Page } from './curso';
+import { Curso, Page } from './curso';
 
 @Injectable()
 export class CursoService {
@@ -14,6 +14,17 @@ export class CursoService {
 
   getPage(pagina: number): Observable<Page> {
     return this.apiService.get<Page>(`${this.cursoUrl}?page=${pagina}`);
+  }
+
+  salva(curso: Curso): Observable<void> {
+    if(curso.id != null) {
+      return this.update(curso);
+    }
+    return this.apiService.post(`${this.cursoUrl}`,curso);
+  }
+
+  private update(curso: Curso): Observable<void> {
+    return this.apiService.put(`${this.cursoUrl}/${curso.id}`, curso);
   }
 
 }

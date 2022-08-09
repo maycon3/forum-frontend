@@ -21,14 +21,14 @@ export class ListaCursoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.cursoService.getPage(this.contador).subscribe(res =>{
-      this.cursos = res.content;
-    });
+    this.buscaListagem();
   }
 
   open(): void {
     const dialogRef = this.dialog.open(ModalCursoComponent);
-    dialogRef.afterClosed().subscribe(() => {});
+    dialogRef.afterClosed().subscribe(() => {
+      this.buscaListagem();
+    });
   }
 
   maisCursos(): void {
@@ -39,6 +39,12 @@ export class ListaCursoComponent implements OnInit {
           this.temMais = false;
         }
       });
+  }
+
+  private buscaListagem(): void {
+    this.cursoService.getPage(this.contador).subscribe(res =>{
+      this.cursos = res.content;
+    });
   }
 
 }

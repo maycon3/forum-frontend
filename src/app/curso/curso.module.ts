@@ -10,6 +10,7 @@ import { LoadButtonModule } from "../shared/components/load-button/load-button.m
 import { ListaCursoComponent } from "./lista-curso/lista-curso.component";
 import { ModalCursoComponent } from "./modal-curso/modal-curso.component";
 import { CursoService } from "./curso.service";
+import { CategoriaModule } from "../categoria/categoria.module";
 
 @NgModule({
   declarations: [ListaCursoComponent,ModalCursoComponent],
@@ -20,7 +21,8 @@ import { CursoService } from "./curso.service";
     ErroMsgModule,
     LoadButtonModule,
     PaginatorModule,
-    RoutingCursoModule
+    RoutingCursoModule,
+    CategoriaModule
   ],
   providers:[
     CursoService

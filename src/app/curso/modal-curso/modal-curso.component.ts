@@ -1,9 +1,12 @@
 import { Component, Inject, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { CategoriaService } from "src/app/categoria/categoria.service";
+
 import { DialogRef } from "src/app/core/modalDialog/dialog-ref";
 import { DIALOG_DATA } from "src/app/core/modalDialog/dialog-token";
 import { Curso } from "../curso";
+import { CursoService } from "../curso.service";
 
 @Component({
   selector: 'app-modal-curso',
@@ -13,11 +16,14 @@ import { Curso } from "../curso";
 export class ModalCursoComponent implements OnInit {
 
   modalCursoForm: FormGroup;
+  categorias$ = this.categoriaService.getAll();
 
   constructor(
     private dialogRef: DialogRef,
     @Inject(DIALOG_DATA) private data: any,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private categoriaService: CategoriaService,
+    private cursoService: CursoService
   ) { }
 
   ngOnInit(): void {
@@ -25,6 +31,17 @@ export class ModalCursoComponent implements OnInit {
     const curso = this.data as Curso;
     if(curso != undefined || curso != null) {
       this.populaCurso(curso);
+    }
+  }
+
+  salva(): void {
+    if(this.modalCursoForm.valid) {
+      const curso = this.modalCursoForm.getRawValue() as Curso;
+      this.cursoService.salva(curso)
+        .subscribe(() => {
+          this.limpaCampo();
+          this.close();
+        });
     }
   }
 
@@ -44,4 +61,7 @@ export class ModalCursoComponent implements OnInit {
     this.modalCursoForm.patchValue({...dados});
   }
 
+  private limpaCampo(): void {
+    this.modalCursoForm.reset();
+  }
 }
