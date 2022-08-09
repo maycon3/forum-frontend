@@ -8,9 +8,10 @@ import { RoutingCursoModule } from "./routing-curso.module";
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 import { LoadButtonModule } from "../shared/components/load-button/load-button.module";
 import { ListaCursoComponent } from "./lista-curso/lista-curso.component";
+import { ModalCursoComponent } from "./modal-curso/modal-curso.component";
 
 @NgModule({
-  declarations: [ListaCursoComponent],
+  declarations: [ListaCursoComponent,ModalCursoComponent],
   imports:[
     CommonModule,
     FormsModule,

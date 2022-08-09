@@ -1,4 +1,5 @@
 @import 'reset-css';
+@import '@angular/cdk/overlay-prebuilt.css';
 
 :root {
   --fonte-principal: "Poppins";
@@ -54,6 +55,20 @@
 .nao-valido {
   border: 1px solid var(--cor-erro);
 }
+
+/* Overlay backdrop styling */
+.overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay panel styling */
+.overlay-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
 
 .fundo__table {
   display: none;
