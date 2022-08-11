@@ -35,3 +35,27 @@
   background-color: var(--cor-btn-principal);
   color: var(--cor-branco);
 }
+
+
+@media screen and (min-width: 1024px) {
+
+  .modal__cabecalho___icone {
+    cursor: pointer;
+  }
+
+  .modal-curso__formulario {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+  }
+
+  .modal-curso__group {
+    width: 100%;
+  }
+
+  .modal-curso__acoes {
+    justify-content: end;
+    margin-right: 1em;
+  }
+}

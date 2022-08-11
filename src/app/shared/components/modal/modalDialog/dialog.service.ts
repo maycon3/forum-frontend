@@ -16,7 +16,7 @@ export class DialogService {
     private injector: Injector
   ) { }
 
-  open<T>(component: ComponentType<T>, config?: DialogConfig) {
+  open<T>(component: ComponentType<T>,classWidth: string, config?: DialogConfig) {
     // Estrategia de posição globalmente centrada
     const positionStrategy = this.overlay
       .position()
@@ -29,7 +29,7 @@ export class DialogService {
       positionStrategy,
       hasBackdrop: true,
       backdropClass: 'overlay-backdrop',
-      panelClass: 'overlay-panel'
+      panelClass: ['overlay-panel',classWidth],
     });
 
     // Criar dialogRef para retornar

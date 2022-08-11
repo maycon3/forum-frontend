@@ -26,7 +26,7 @@ export class ListaCursoComponent implements OnInit {
   }
 
   open(curso?: Curso): void {
-    const dialogRef = this.dialog.open(ModalCursoComponent,{data: curso});
+    const dialogRef = this.dialog.open(ModalCursoComponent,'overlay-panel__modal-curso',{data: curso});
     dialogRef.afterClosed().subscribe(() => {
       this.buscaListagem();
     });

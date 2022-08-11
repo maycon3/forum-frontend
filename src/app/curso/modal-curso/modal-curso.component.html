@@ -3,8 +3,9 @@
    <h1 class="modal__cabecalho___titulo">Curso</h1>
    <span class="modal__cabecalho___icone fa fa-times" (click)="close()"></span>
  </header>
- <form [formGroup]="modalCursoForm">
+ <form [formGroup]="modalCursoForm" class="modal-curso__formulario">
   <div class="modal-curso__group">
+    <label> </label>
     <select class="select__form" formControlName="categoriaId">
       <option value="">Selecione a Categoria</option>
       <option *ngFor="let categoria of categorias$ | async" [ngValue]="categoria.id">
