@@ -25,7 +25,9 @@
           <td class="table__corpo___item">{{ curso.categoria }}</td>
           <td class="table__corpo___item">{{ curso.nomeCurso }}</td>
           <td class="table__corpo___item table__acao">
-            <button class="table___btn"><span class="fa fa-pencil-square-o"></span></button>
+            <button class="table___btn" (click)="open(curso)">
+              <span class="fa fa-pencil-square-o"></span>
+            </button>
           </td>
         </tr>
       </tbody>

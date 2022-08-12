@@ -33,6 +33,7 @@ export class ModalCursoComponent implements OnInit {
     const curso = this.data.data as Curso;
     if(curso != undefined) {
       this.populaCurso(curso);
+      this.modalCursoForm.get('categoriaId')?.disable();
     }
   }
 
