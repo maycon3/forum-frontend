@@ -1,16 +1,21 @@
-import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
+import { Router } from "@angular/router";
 
 import { NgxSpinnerService } from "ngx-spinner";
 import { MessageService } from "primeng/api";
 import { catchError, Observable, throwError } from "rxjs";
+
+import { UserService } from "../user/user.service";
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
   constructor(
     private messageService: MessageService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private usuarioService: UserService,
+    private router: Router
   ) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -34,12 +39,25 @@ export class ErrorInterceptor implements HttpInterceptor {
         detail: error.error.message
       });
       return;
-    } else if(error.status == 404) {
+    }
+
+    if(error.status == 404) {
       this.messageService.add({
         severity: 'error',
         summary: '',
         detail: error.error.msg
       });
+      return;
+    }
+
+    if(error.status == 403) {
+      this.usuarioService.logout();
+      this.router.navigate(['']);
+      this.messageService.add({
+        severity:'error',
+        detail: 'Token expirado'
+      });
+      return;
     }
     this.toast(error);
   }
