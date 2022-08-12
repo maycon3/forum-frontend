@@ -41,8 +41,12 @@
     font-size: 25px;
     font-family: var(--fonte-segundaria);
     font-weight: 700;
-    color: var(--cor-branco);
     margin-right: 2em;
+  }
+
+  .cabecalho__logo a {
+    color: var(--cor-branco);
+    text-decoration: none;
   }
 
   .cabecalho__lista {
