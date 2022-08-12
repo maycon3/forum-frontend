@@ -113,4 +113,8 @@
     display: none;
   }
 
+  .lista-vazia {
+    display: none;
+  }
+
 }

@@ -20,10 +20,10 @@
         <th class="table__cabecalho___item"></th>
       </thead>
       <tbody class="table__corpo">
-        <tr class="table__corpo__linha">
-          <td class="table__corpo___item">1</td>
-          <td class="table__corpo___item">Programação</td>
-          <td class="table__corpo___item">Java</td>
+        <tr class="table__corpo__linha" *ngFor="let curso of cursos">
+          <td class="table__corpo___item">{{ curso.id }}</td>
+          <td class="table__corpo___item">{{ curso.categoria }}</td>
+          <td class="table__corpo___item">{{ curso.nomeCurso }}</td>
           <td class="table__corpo___item table__acao">
             <button class="table___btn"><span class="fa fa-pencil-square-o"></span></button>
           </td>
@@ -32,7 +32,11 @@
     </table>
 
     <div class="curso__paginacao___prime">
-      <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
+      <p-paginator
+        [rows]="10"
+        [totalRecords]="totalPaginas"
+        (onPageChange)="paginate($event)">
+      </p-paginator>
     </div>
   </div>
   <div class="curso__paginacao" *ngIf="temMais; else listaCurso">

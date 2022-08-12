@@ -14,7 +14,8 @@ export class ListaCursoComponent implements OnInit {
   cursos: Curso[];
   contador = 0;
   temMais = true;
-  readonly inicio = 0;
+  page = 0;
+  totalPaginas = 0;
 
   constructor(
     private dialog: DialogService,
@@ -42,9 +43,16 @@ export class ListaCursoComponent implements OnInit {
       });
   }
 
+  paginate(event: any): void {
+    this.page = event.page;
+    this.buscaListagem();
+  }
+
   private buscaListagem(): void {
-    this.cursoService.getPage(this.inicio).subscribe(res =>{
+    this.cursoService.getPage(this.page).subscribe(res =>{
       this.cursos = res.content;
+      this.totalPaginas = res.totalElements;
+      this.page = res.number;
       this.temMais = true;
     });
   }
