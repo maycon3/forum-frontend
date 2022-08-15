@@ -11,7 +11,7 @@ export class ApiService {
     if(environment.production) {
       return environment.api;
     }
-    return 'http://localhost/api';
+    return environment.api;
   }
 
   constructor(private http: HttpClient) { }
