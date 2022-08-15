@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static(__dirname + "/dist/forum"));
 
  app.get("/*", function(req, res) {
-  res.sendFile('index.html',{ root:__dirname});
+  res.sendFile(__dirname + "/dist/forum/index.html");
 });
 
 //Inicia a aplicação pela porta configurada
