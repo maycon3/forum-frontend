@@ -4,6 +4,8 @@ import { HeaderComponent } from "./header/header.component";
 
 import {ToastModule} from 'primeng/toast';
 
+import { DropdownModule } from "../shared/components/dropdown/dropdown.module";
+
 import { ApiService } from "./services/api.service";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { RouterModule } from "@angular/router";
@@ -29,6 +31,7 @@ import { MenuComponent } from "./menu/menu.component";
     CommonModule,
     ToastModule,
     NgxSpinnerModule,
+    DropdownModule,
     RouterModule
   ],
   exports: [HeaderComponent,NgxSpinnerModule],

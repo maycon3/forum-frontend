@@ -14,7 +14,7 @@
       </ul>
     </div>
 
-    <ul class="cabecalho__configuracao">
+    <!-- <ul class="cabecalho__configuracao">
       <input type="checkbox" id="configuracao" class="cabecalho__configuracao___botao">
       <label for="configuracao" class="cabecalho__configuracao___rotulo">
         <li class="cabecalho__configuracao___item">
@@ -37,7 +37,16 @@
           </a>
         </li>
       </ul>
-    </ul>
+    </ul> -->
+    <div class="wrapper">
+      <button [dropdownTriggerFor]="dropdown" class="button">Open dropdown</button>
+
+      <app-dropdown #dropdown>
+        <div (click)="test()" class="dropdown-item">Cut</div>
+        <div (click)="test()" class="dropdown-item">Copy</div>
+        <div (click)="test()" class="dropdown-item">Paste</div>
+      </app-dropdown>
+  </div>
   </div>
 </header>
 <div class="banner" *ngIf="estaLogado()">

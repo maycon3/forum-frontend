@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { NgxSpinnerService } from "ngx-spinner";
@@ -13,6 +13,7 @@ import { UserService } from "../user/user.service";
 export class HeaderComponent implements OnInit {
 
  nome: string|null = '';
+ @Output() closed = new EventEmitter<void>();
 
   constructor(
     private router: Router,
@@ -32,6 +33,11 @@ export class HeaderComponent implements OnInit {
 
    estaLogado(): boolean {
     return this.tokenService.hasToken();
+  }
+
+  test() {
+    this.router.navigate(['/categoria']);
+    this.closed.emit();
   }
 
 }
