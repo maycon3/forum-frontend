@@ -16,6 +16,10 @@
   display: none;
 }
 
+.dropdown-wrapper {
+  display: none;
+}
+
 @media screen and (min-width:1024px) {
 
   .cabecalho {
@@ -58,54 +62,44 @@
     margin-right: 1em;
   }
 
-  .cabecalho__link,
-  .cabecalho__configuracao___item {
+   .cabecalho__link {
     font-weight: 300;
     text-decoration: none;
     color: var(--cor-branco);
     cursor: pointer;
   }
 
-  .cabecalho__configuracao {
+  .dropdown-wrapper {
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
 
-  .cabecalho__configuracao___botao {
-    display: none;
+  .dropdown-btn {
+    font-weight: 300;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    background-color: var(--cor-barra-navegacao);
+    color: var(--cor-branco);
+    cursor: pointer;
+    border-color: transparent;
   }
 
-  .lista-configuracao {
-    display: none;
-  }
 
-  .cabecalho__configuracao___botao:checked~.lista-configuracao {
-    display: block;
-  }
-
-  .lista-configuracao {
-    position: absolute;
-    top: 100%;
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    color: var(--cor-btn-principal);
     background-color: var(--cor-branco);
-    width: 20%;
+    border: none;
+    cursor: pointer;
+    outline: none;
   }
 
-  .lista__item {
-    color: var(--cor-principal);
-  }
-
-  .lista__link {
-    width: 100%;
-    padding: 1em;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--cor-principal);
-  }
-
-  .lista__link:hover {
+  .dropdown-item:hover {
     background-color: var(--cor-principal);
     color: var(--cor-branco);
   }
+
 
   .banner {
     display: block;
@@ -126,39 +120,5 @@
 }
 
 
-/*teste aqui*/
 
 
-.wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 6rem;
-}
-
-.button {
-  padding: 0.5rem 1rem;
-  background-color: white;
-  border-radius: 6px;
-  border: 1px solid rgba(64, 64, 64, 0.15);
-  box-shadow: 0 10px 20px rgba(64, 64, 64, 0.15);
-  font-family: inherit;
-  cursor: pointer;
-}
-
-button:hover,
-button:focus {
-  background-color: #f3f4f5;
-}
-
-.dropdown-item {
-  padding: 0.5rem 1rem;
-  font-family: inherit;
-  background-color: white;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.dropdown-item:hover {
-  background-color: #f3f4f5;
-}
