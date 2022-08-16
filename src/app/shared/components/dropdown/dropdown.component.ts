@@ -10,8 +10,4 @@ export class DropdownComponent implements DropdownPanel {
   @ViewChild(TemplateRef) templateRef: TemplateRef<any>;
   @Output() closed = new EventEmitter<void>();
 
-  clique(): void {
-    console.log('estão clicando...');
-    this.closed.emit()
-  }
 }
