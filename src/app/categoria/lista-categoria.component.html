@@ -8,7 +8,7 @@
     <div>
 
     </div>
-    <ul class="categoria__lista" *ngIf="!categorias; else listaVazia" >
+    <ul class="categoria__lista" *ngIf="categorias.length; else listaVazia" >
       <li class="categoria__lista___item" *ngFor="let categoria of categorias">
         <a class="categoria__lista___link" (click)="abreModal(categoria)">
           {{ categoria.nome }}
