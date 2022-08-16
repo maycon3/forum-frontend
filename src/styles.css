@@ -5,6 +5,7 @@
   --fonte-principal: "Poppins";
   --fonte-segundaria: "josefin Sans";
   --cor-branco: #FFFFFF;
+  --cor-branco-fosco: rgba(255,255,255, .5);
   --cor-de-fundo: #EBECEE;
   --cor-barra-navegacao: #051932;
   --cor-btn-principal: #093364;
@@ -158,4 +159,5 @@
   .overlay-panel__modal-curso {
     width: 50%;
   }
+
 }
