@@ -3,7 +3,7 @@
     <a type="button" routerLink="/forum/todos" class="btn btn-ligth acoes">voltar</a>
     <button type="button" class="btn curso__navegacao___btn acoes" (click)="open()">Criar Curso</button>
   </div>
-  <ul class="curso__lista" *ngIf="temCurso(); else listaVazia">
+  <ul class="curso__lista" *ngIf="cursos.length; else listaVazia">
     <li class="curso__lista___item" *ngFor="let curso of cursos">
       <a class="curso__lista___link" (click)="open(curso)" >
         {{ curso.nomeCurso }}
@@ -11,7 +11,7 @@
     </li>
   </ul>
 
-  <div class="fundo__table" *ngIf="temCurso()">
+  <div class="fundo__table" *ngIf="cursos.length">
     <table class="table">
       <thead class="table__cabecalho">
         <th class="table__cabecalho___item">ID</th>
@@ -41,7 +41,7 @@
       </p-paginator>
     </div>
   </div>
-  <div *ngIf="temCurso()">
+  <div *ngIf="cursos.length">
     <div class="curso__paginacao" *ngIf="temMais; else listaCurso">
       <app-load-button (click)="maisCursos()"></app-load-button>
     </div>
