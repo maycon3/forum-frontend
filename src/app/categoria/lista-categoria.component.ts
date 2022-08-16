@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { Observable, Subscription } from "rxjs";
 
 import { Categoria } from "./categoria";
@@ -12,16 +13,17 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
 })
 export class ListaCategoriaComponent implements OnInit, OnDestroy {
 
-  categorias$ = new Observable<Categoria[]>();
+  categorias: Categoria[];
   inscricao: Subscription;
 
   constructor(
     private categoriaService: CategoriaService,
-    private modalService: ModalCategoriaService
+    private modalService: ModalCategoriaService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    this.categorias$ = this.categoriaService.getAll();
+    this.categorias = this.route.snapshot.data['categorias'];
     this.atualizaLista();
   }
 
@@ -32,8 +34,13 @@ export class ListaCategoriaComponent implements OnInit, OnDestroy {
   private atualizaLista(): void {
     this.inscricao = this.modalService.getResultado()
     .subscribe(() => {
-      this.categorias$ = this.categoriaService.getAll();
+      this.getCatagorias();
     });
+  }
+
+  private getCatagorias(): void {
+    this.categoriaService.getAll()
+      .subscribe(res => this.categorias = res);
   }
 
   ngOnDestroy(): void {

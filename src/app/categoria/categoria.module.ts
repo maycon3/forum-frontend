@@ -10,6 +10,7 @@ import { LoadButtonModule } from "../shared/components/load-button/load-button.m
 import { CategoriaRoutingModule } from "./categoria-routing.module";
 import { CategoriaService } from "./categoria.service";
 import { ListaCategoriaComponent } from "./lista-categoria.component";
+import { ListaCategoriaResolver } from "./lista-categoria.resolver";
 import { ModalCategoriaComponent } from "./modal-categoria/modal-categoria.component";
 import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service";
 
@@ -29,9 +30,10 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
   ],
   exports:[],
   providers:[
-    //CategoriaService,
+    CategoriaService,
     ModalCategoriaService,
-    BsModalService
+    BsModalService,
+    ListaCategoriaResolver
   ]
 })
 export class CategoriaModule { }

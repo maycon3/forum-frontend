@@ -4,7 +4,7 @@ import { map, Observable } from "rxjs";
 import { ApiService } from "../core/services/api.service";
 import { Categoria } from "./categoria";
 
-@Injectable({'providedIn':'root'})
+@Injectable()
 export class CategoriaService {
 
   private categoriaUrl = '/categorias';
