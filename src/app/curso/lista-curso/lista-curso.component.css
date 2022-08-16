@@ -48,6 +48,13 @@
   padding: .3em;
 }
 
+.paginacao-vazio {
+  background-color: var(--cor-branco);
+  padding: 1em 0;
+  text-align: center;
+  margin-top: 6em;
+}
+
 .curso__paginacao___prime {
   display: none;
 }

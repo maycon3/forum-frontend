@@ -1,9 +1,9 @@
 <section class="curso">
   <div class="curso__navegacao">
-    <a type="button" class="btn btn-ligth acoes">voltar</a>
+    <a type="button" routerLink="/forum/todos" class="btn btn-ligth acoes">voltar</a>
     <button type="button" class="btn curso__navegacao___btn acoes" (click)="open()">Criar Curso</button>
   </div>
-  <ul class="curso__lista">
+  <ul class="curso__lista" *ngIf="temCurso(); else listaVazia">
     <li class="curso__lista___item" *ngFor="let curso of cursos">
       <a class="curso__lista___link" (click)="open(curso)" >
         {{ curso.nomeCurso }}
@@ -11,7 +11,7 @@
     </li>
   </ul>
 
-  <div class="fundo__table">
+  <div class="fundo__table" *ngIf="temCurso()">
     <table class="table">
       <thead class="table__cabecalho">
         <th class="table__cabecalho___item">ID</th>
@@ -20,16 +20,16 @@
         <th class="table__cabecalho___item"></th>
       </thead>
       <tbody class="table__corpo">
-        <tr class="table__corpo__linha" *ngFor="let curso of cursos">
-          <td class="table__corpo___item">{{ curso.id }}</td>
-          <td class="table__corpo___item">{{ curso.categoria }}</td>
-          <td class="table__corpo___item">{{ curso.nomeCurso }}</td>
-          <td class="table__corpo___item table__acao">
-            <button class="table___btn" (click)="open(curso)">
-              <span class="fa fa-pencil-square-o"></span>
-            </button>
-          </td>
-        </tr>
+          <tr class="table__corpo__linha" *ngFor="let curso of cursos">
+            <td class="table__corpo___item">{{ curso.id }}</td>
+            <td class="table__corpo___item">{{ curso.categoria }}</td>
+            <td class="table__corpo___item">{{ curso.nomeCurso }}</td>
+            <td class="table__corpo___item table__acao">
+              <button class="table___btn" (click)="open(curso)">
+                <span class="fa fa-pencil-square-o"></span>
+              </button>
+            </td>
+          </tr>
       </tbody>
     </table>
 
@@ -41,13 +41,21 @@
       </p-paginator>
     </div>
   </div>
-  <div class="curso__paginacao" *ngIf="temMais; else listaCurso">
-    <app-load-button (click)="maisCursos()"></app-load-button>
+  <div *ngIf="temCurso()">
+    <div class="curso__paginacao" *ngIf="temMais; else listaCurso">
+      <app-load-button (click)="maisCursos()"></app-load-button>
+    </div>
   </div>
 </section>
 
 <ng-template #listaCurso>
   <div class="lista-vazia">
     <p>Não há mais curso </p>
+  </div>
+</ng-template>
+
+<ng-template #listaVazia>
+  <div class="paginacao-vazio">
+    <p>Não há nenhum curso cadastrado</p>
   </div>
 </ng-template>

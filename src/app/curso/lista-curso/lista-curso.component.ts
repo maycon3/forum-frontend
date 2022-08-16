@@ -11,9 +11,9 @@ import { ModalCursoComponent } from "../modal-curso/modal-curso.component";
 })
 export class ListaCursoComponent implements OnInit {
 
-  cursos: Curso[];
+  cursos: Curso[] = [];
   contador = 0;
-  temMais = true;
+  temMais: boolean;
   page = 0;
   totalPaginas = 0;
 
@@ -24,6 +24,7 @@ export class ListaCursoComponent implements OnInit {
 
   ngOnInit(): void {
     this.buscaListagem();
+    this.temCurso();
   }
 
   open(curso?: Curso): void {
@@ -46,6 +47,15 @@ export class ListaCursoComponent implements OnInit {
   paginate(event: any): void {
     this.page = event.page;
     this.buscaListagem();
+  }
+
+  temCurso(): boolean {
+    if(!!this.cursos) {
+      this.temMais = false;
+      return false;
+    }
+    this.temMais = true;
+    return true;
   }
 
   private buscaListagem(): void {
