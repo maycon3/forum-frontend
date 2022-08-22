@@ -1,16 +1,15 @@
-<app-modal-categoria></app-modal-categoria>
 <!-- <div *ngIf="{categorias: categorias$ | async} as vm"> -->
   <section class="categoria">
     <div class="categoria__acoes">
       <a type="button" routerLink="/forum/todos" class="btn btn-ligth categoria__acoes___retorno">voltar</a>
-      <button class="btn categoria__acoes___criar" (click)="abreModal()">Criar categoria</button>
+      <button class="btn categoria__acoes___criar" (click)="open()">Criar categoria</button>
     </div>
     <div>
 
     </div>
     <ul class="categoria__lista" *ngIf="categorias.length; else vazio" >
       <li class="categoria__lista___item" *ngFor="let categoria of categorias">
-        <a class="categoria__lista___link" (click)="abreModal(categoria)">
+        <a class="categoria__lista___link" (click)="open(categoria)">
           {{ categoria.nome }}
         </a>
       </li>
@@ -28,7 +27,7 @@
               <td class="table__corpo___item">{{ categoria.id }}</td>
               <td class="table__corpo___item">{{ categoria.nome }}</td>
               <td class="table__corpo___item table__acao">
-                <button class="table___btn" title="Edição de Categoria" (click)="abreModal(categoria)">
+                <button class="table___btn" title="Edição de Categoria" (click)="open(categoria)">
                   <span class="fa fa-pencil-square-o"></span>
                 </button>
               </td>

@@ -1,17 +1,18 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { Observable, Subscription } from "rxjs";
+import { Subscription } from "rxjs";
+import { DialogService } from "../shared/components/modal/modalDialog/dialog.service";
 
 import { Categoria } from "./categoria";
 import { CategoriaService } from "./categoria.service";
-import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service";
+import { ModalCategoriaComponent } from "./modal-categoria/modal-categoria.component";
 
 @Component({
   selector: 'app-lista-categoria',
   templateUrl:'./lista-categoria.component.html',
   styleUrls: ['./lista-categoria.component.css']
 })
-export class ListaCategoriaComponent implements OnInit, OnDestroy {
+export class ListaCategoriaComponent implements OnInit {
 
   categorias: Categoria[] = [];
   temMais: boolean;
@@ -22,17 +23,24 @@ export class ListaCategoriaComponent implements OnInit, OnDestroy {
 
   constructor(
     private categoriaService: CategoriaService,
-    private modalService: ModalCategoriaService,
+    private dialog: DialogService,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.buscaListagem();
-    this.atualizaLista();
   }
 
-  abreModal(categoria?: Categoria): void {
-    this.modalService.open(categoria);
+  open(categoria?: Categoria): void {
+    const dialogRef = this.dialog
+      .open(
+        ModalCategoriaComponent,
+        'overlay-panel__modal-curso',
+        {data: categoria});
+    dialogRef.afterClosed()
+      .subscribe(() => {
+        this.buscaListagem();
+      });
   }
 
   maisCategorias(): void {
@@ -50,13 +58,6 @@ export class ListaCategoriaComponent implements OnInit, OnDestroy {
     this.buscaListagem();
   }
 
-  private atualizaLista(): void {
-    this.inscricao = this.modalService.getResultado()
-    .subscribe(() => {
-      this.buscaListagem();
-    });
-  }
-
   private buscaListagem(): void {
     this.categoriaService.getPage(this.page)
       .subscribe(res => {
@@ -67,7 +68,4 @@ export class ListaCategoriaComponent implements OnInit, OnDestroy {
       });
   }
 
-  ngOnDestroy(): void {
-    this.inscricao.unsubscribe();
-  }
 }

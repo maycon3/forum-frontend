@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {PaginatorModule} from 'primeng/paginator';
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 import { LoadButtonModule } from "../shared/components/load-button/load-button.module";
+import { ModalModule } from "../shared/components/modal/modal.module";
 
 import { CategoriaRoutingModule } from "./categoria-routing.module";
 import { CategoriaService } from "./categoria.service";
@@ -25,6 +26,7 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
     ErroMsgModule,
     LoadButtonModule,
     PaginatorModule,
+    ModalModule,
     CategoriaRoutingModule
   ],
   exports:[],

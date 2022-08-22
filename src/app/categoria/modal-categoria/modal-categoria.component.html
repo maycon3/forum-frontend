@@ -1,6 +1,4 @@
-<ng-container *ngIf="display$ | async as display">
-  <section [class.open]="display.watch === 'open'">
-    <div class="modal-categoria">
+  <section class="modal-categoria" >
       <header class="modal-categoria__cabecalho">
         <h2 class="modal-categoria__titlulo">Categoria</h2>
         <span class="modal-categoria___icone fa fa-times" (click)="close()"></span>
@@ -22,6 +20,5 @@
           Salvar
         </button>
       </div>
-    </div>
   </section>
-</ng-container>
+
