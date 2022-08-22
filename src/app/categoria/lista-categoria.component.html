@@ -8,7 +8,7 @@
     <div>
 
     </div>
-    <ul class="categoria__lista" *ngIf="categorias.length; else listaVazia" >
+    <ul class="categoria__lista" *ngIf="categorias.length; else vazio" >
       <li class="categoria__lista___item" *ngFor="let categoria of categorias">
         <a class="categoria__lista___link" (click)="abreModal(categoria)">
           {{ categoria.nome }}
@@ -36,14 +36,25 @@
         </tbody>
       </table>
     </div>
-
+    <div class="categoria__paginacao___prime">
+      <p-paginator
+        [rows]="10"
+        [totalRecords]="totalPaginas"
+        (onPageChange)="paginate($event)"
+       >
+      </p-paginator>
+    </div>
+    <div class="categoria__app-load" *ngIf="temMais; else naoHaMais">
+      <app-load-button (click)="maisCategorias()">
+      </app-load-button>
+    </div>
 
   </section>
 <!-- </div> -->
 
-<ng-template #listaVazia>
-  <div class="lista-vazia">
-    <p>Não há categoria cadastrada</p>
+<ng-template #naoHaMais>
+  <div class="nao-ha-mais">
+    <p>Não há mais categorias</p>
   </div>
 </ng-template>
 

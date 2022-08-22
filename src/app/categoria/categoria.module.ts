@@ -2,8 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { BsModalService } from "ngx-bootstrap/modal";
-import { ModalModule } from 'ngx-bootstrap/modal';
+import {PaginatorModule} from 'primeng/paginator';
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 import { LoadButtonModule } from "../shared/components/load-button/load-button.module";
 
@@ -23,16 +22,15 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ModalModule.forRoot(),
     ErroMsgModule,
     LoadButtonModule,
+    PaginatorModule,
     CategoriaRoutingModule
   ],
   exports:[],
   providers:[
     CategoriaService,
     ModalCategoriaService,
-    BsModalService,
     ListaCategoriaResolver
   ]
 })

@@ -13,7 +13,11 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
 })
 export class ListaCategoriaComponent implements OnInit, OnDestroy {
 
-  categorias: Categoria[];
+  categorias: Categoria[] = [];
+  temMais: boolean;
+  totalPaginas = 0;
+  page = 0;
+  contador = 0;
   inscricao: Subscription;
 
   constructor(
@@ -23,7 +27,7 @@ export class ListaCategoriaComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.categorias = this.route.snapshot.data['categorias'];
+    this.buscaListagem();
     this.atualizaLista();
   }
 
@@ -31,16 +35,36 @@ export class ListaCategoriaComponent implements OnInit, OnDestroy {
     this.modalService.open(categoria);
   }
 
+  maisCategorias(): void {
+    this.categoriaService.getPage(++this.contador)
+      .subscribe(res => {
+        this.categorias = this.categorias.concat(res.content);
+        if(!res.content.length) {
+          this.temMais = false;
+        }
+      });
+  }
+
+  paginate(event: any): void {
+    this.page = event.page;
+    this.buscaListagem();
+  }
+
   private atualizaLista(): void {
     this.inscricao = this.modalService.getResultado()
     .subscribe(() => {
-      this.getCatagorias();
+      this.buscaListagem();
     });
   }
 
-  private getCatagorias(): void {
-    this.categoriaService.getAll()
-      .subscribe(res => this.categorias = res);
+  private buscaListagem(): void {
+    this.categoriaService.getPage(this.page)
+      .subscribe(res => {
+        this.categorias = res.content;
+        this.totalPaginas = res.totalElements;
+        this.page = res.number;
+        this.temMais = true;
+      });
   }
 
   ngOnDestroy(): void {

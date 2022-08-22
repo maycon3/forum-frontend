@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
 
 import { ApiService } from "../core/services/api.service";
+import { Page } from "../shared/interfaces/paginacao";
 import { Categoria } from "./categoria";
 
 @Injectable()
@@ -16,6 +17,10 @@ export class CategoriaService {
       .pipe(
         map((categorias: Categoria[]) => categorias.sort((categoriaA, categoriaB) => this.ordenaPorNome(categoriaA,categoriaB)))
       )
+  }
+
+  getPage(pagina: number): Observable<Page<Categoria[]>> {
+    return this.apiService.get<Page<Categoria[]>>(`${this.categoriaUrl}?page=${pagina}&sort=nome`)
   }
 
   get(id: number):Observable<Categoria> {
