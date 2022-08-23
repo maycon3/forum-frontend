@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
 
-import { ApiService } from "../core/services/api.service";
-import { Page } from "../shared/interfaces/paginacao";
-import { Categoria } from "./categoria";
+import { ApiService } from "../../core/services/api.service";
+import { Page } from "../../shared/interfaces/paginacao";
+import { Categoria } from "../interfaces/categoria";
 
 @Injectable()
 export class CategoriaService {

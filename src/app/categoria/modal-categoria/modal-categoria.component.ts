@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { CategoriaService } from '../categoria.service';
-import { Categoria } from "../categoria";
+import { CategoriaService } from '../services/categoria.service';
+import { Categoria } from "../interfaces/categoria";
 import { DialogRef } from 'src/app/shared/components/modal/modalDialog/dialog-ref';
 import { DIALOG_DATA } from 'src/app/shared/components/modal/modalDialog/dialog-token';
 

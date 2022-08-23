@@ -9,7 +9,7 @@ import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 import { LoadButtonModule } from "../shared/components/load-button/load-button.module";
 import { ListaCursoComponent } from "./lista-curso/lista-curso.component";
 import { ModalCursoComponent } from "./modal-curso/modal-curso.component";
-import { CursoService } from "./curso.service";
+import { CursoService } from "./services/curso.service";
 import { CategoriaModule } from "../categoria/categoria.module";
 import { ModalModule } from "../shared/components/modal/modal.module";
 

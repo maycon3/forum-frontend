@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 
-import { ApiService } from '../core/services/api.service';
-import { Page } from '../shared/interfaces/paginacao';
-import { Curso } from './curso';
+import { ApiService } from '../../core/services/api.service';
+import { Page } from '../../shared/interfaces/paginacao';
+import { Curso } from '../interfaces/curso';
 
 @Injectable()
 export class CursoService {

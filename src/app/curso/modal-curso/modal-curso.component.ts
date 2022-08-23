@@ -2,12 +2,12 @@ import { Component, Inject, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subject } from "rxjs";
 
-import { CategoriaService } from "src/app/categoria/categoria.service";
+import { CategoriaService } from "src/app/categoria/services/categoria.service";
 
 import { DialogRef } from "src/app/shared/components/modal/modalDialog/dialog-ref";
 import { DIALOG_DATA } from "src/app/shared/components/modal/modalDialog/dialog-token";
-import { Curso } from "../curso";
-import { CursoService } from "../curso.service";
+import { Curso } from "../interfaces/curso";
+import { CursoService } from "../services/curso.service";
 
 @Component({
   selector: 'app-modal-curso',

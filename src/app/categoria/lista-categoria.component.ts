@@ -3,8 +3,8 @@ import { ActivatedRoute } from "@angular/router";
 import { Subscription } from "rxjs";
 import { DialogService } from "../shared/components/modal/modalDialog/dialog.service";
 
-import { Categoria } from "./categoria";
-import { CategoriaService } from "./categoria.service";
+import { Categoria } from "./interfaces/categoria";
+import { CategoriaService } from "./services/categoria.service";
 import { ModalCategoriaComponent } from "./modal-categoria/modal-categoria.component";
 
 @Component({

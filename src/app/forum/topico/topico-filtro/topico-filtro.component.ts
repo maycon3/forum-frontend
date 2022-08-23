@@ -4,9 +4,9 @@ import { ActivatedRoute, Router } from "@angular/router";
 
 import { Subscription, tap } from "rxjs";
 
-import { Categoria } from "src/app/categoria/categoria";
-import { CategoriaService } from "src/app/categoria/categoria.service";
-import { CursoService } from "src/app/curso/curso.service";
+import { Categoria } from "src/app/categoria/interfaces/categoria";
+import { CategoriaService } from "src/app/categoria/services/categoria.service";
+import { CursoService } from "src/app/curso/services/curso.service";
 import { BaseFormComponent } from "src/app/shared/directives/base-form/base-form.component";
 import { TipoRota } from "./tipo-rota";
 

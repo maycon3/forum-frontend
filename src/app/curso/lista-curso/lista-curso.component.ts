@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DialogService } from "src/app/shared/components/modal/modalDialog/dialog.service";
-import { Curso } from "../curso";
-import { CursoService } from "../curso.service";
+import { Curso } from "../interfaces/curso";
+import { CursoService } from "../services/curso.service";
 import { ModalCursoComponent } from "../modal-curso/modal-curso.component";
 
 @Component({

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
 import { Observable } from "rxjs";
-import { Categoria } from "./categoria";
+import { Categoria } from "../interfaces/categoria";
 import { CategoriaService } from "./categoria.service";
 
 @Injectable()

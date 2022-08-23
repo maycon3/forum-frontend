@@ -8,11 +8,10 @@ import { LoadButtonModule } from "../shared/components/load-button/load-button.m
 import { ModalModule } from "../shared/components/modal/modal.module";
 
 import { CategoriaRoutingModule } from "./categoria-routing.module";
-import { CategoriaService } from "./categoria.service";
+import { CategoriaService } from "./services/categoria.service";
 import { ListaCategoriaComponent } from "./lista-categoria.component";
-import { ListaCategoriaResolver } from "./lista-categoria.resolver";
+import { ListaCategoriaResolver } from "./services/lista-categoria.resolver";
 import { ModalCategoriaComponent } from "./modal-categoria/modal-categoria.component";
-import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service";
 
 @NgModule({
   declarations:[
@@ -32,7 +31,6 @@ import { ModalCategoriaService } from "./modal-categoria/modal-categoria.service
   exports:[],
   providers:[
     CategoriaService,
-    ModalCategoriaService,
     ListaCategoriaResolver
   ]
 })
