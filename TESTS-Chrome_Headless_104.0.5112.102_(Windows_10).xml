@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 104.0.5112.102 (Windows 10)" package="" timestamp="2022-08-24T22:15:19" id="0" hostname="DESKTOP-TO05236" tests="9" errors="0" failures="0" time="0.462">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/104.0.5112.102 Safari/537.36"/>
+  </properties>
+  <testcase name="CategoriaService #get deve retorna uma categoria" time="0.291" classname="Chrome_Headless_104_0_5112_102_(Windows_10).CategoriaService"/>
+  <testcase name="CategoriaService #getAll deve retorna&#xA;     lista de categorias" time="0.007" classname="Chrome_Headless_104_0_5112_102_(Windows_10).CategoriaService"/>
+  <testcase name="AppComponent should create the app" time="0.017" classname="Chrome_Headless_104_0_5112_102_(Windows_10).AppComponent"/>
+  <testcase name="AppComponent should have as title 'forum'" time="0.007" classname="Chrome_Headless_104_0_5112_102_(Windows_10).AppComponent"/>
+  <testcase name="ListaCategoriaComponent (D) Deve exibir a listagem  quando os dados chegarem" time="0.053" classname="Chrome_Headless_104_0_5112_102_(Windows_10).ListaCategoriaComponent"/>
+  <testcase name="ListaCategoriaComponent #maisCategorias deve&#xA;        dar o valor verdadeiro quando a listagem for carregada" time="0.046" classname="Chrome_Headless_104_0_5112_102_(Windows_10).ListaCategoriaComponent"/>
+  <testcase name="ListaCategoriaComponent #maisCategorias deve&#xA;        dar o valor falso quando a listagem vier vazia" time="0.021" classname="Chrome_Headless_104_0_5112_102_(Windows_10).ListaCategoriaComponent"/>
+  <testcase name="ListaCategoriaComponent Deve criar o componente" time="0.007" classname="Chrome_Headless_104_0_5112_102_(Windows_10).ListaCategoriaComponent"/>
+  <testcase name="ListaCategoriaComponent (D) Deve exibir a mensagem quando os dados não chegarem" time="0.013" classname="Chrome_Headless_104_0_5112_102_(Windows_10).ListaCategoriaComponent"/>
+  <system-out>
+    <![CDATA[Chrome Headless 104.0.5112.102 (Windows 10) ERROR: 'NG0304: 'app-header' is not a known element (used in the 'AppComponent' component template):
+1. If 'app-header' is an Angular component, then verify that it is a part of an @NgModule where this component is declared.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Chrome Headless 104.0.5112.102 (Windows 10) ERROR: 'NG0304: 'app-header' is not a known element (used in the 'AppComponent' component template):
+1. If 'app-header' is an Angular component, then verify that it is a part of an @NgModule where this component is declared.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Chrome Headless 104.0.5112.102 (Windows 10) LOG: 'erro aqui: ', HttpErrorResponse{headers: HttpHeaders{normalizedNames: Map{}, lazyUpdate: null, headers: Map{}}, status: 0, statusText: 'Unknown Error', url: 'http://localhost:8080/categorias?page=0&sort=nome', ok: false, name: 'HttpErrorResponse', message: 'Http failure response for http://localhost:8080/categorias?page=0&sort=nome: 0 Unknown Error', error: ProgressEvent{isTrusted: true}}
+,Chrome Headless 104.0.5112.102 (Windows 10) LOG: 'erro aqui: ', HttpErrorResponse{headers: HttpHeaders{normalizedNames: Map{}, lazyUpdate: null, headers: Map{}}, status: 0, statusText: 'Unknown Error', url: 'http://localhost:8080/categorias?page=0&sort=nome', ok: false, name: 'HttpErrorResponse', message: 'Http failure response for http://localhost:8080/categorias?page=0&sort=nome: 0 Unknown Error', error: ProgressEvent{isTrusted: true}}
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

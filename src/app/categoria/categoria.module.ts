@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import {PaginatorModule} from 'primeng/paginator';
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
@@ -21,6 +22,7 @@ import { ModalCategoriaComponent } from "./modal-categoria/modal-categoria.compo
   imports:[
     CommonModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     ErroMsgModule,
     LoadButtonModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
 import { Subscription } from "rxjs";
 import { DialogService } from "../shared/components/modal/modalDialog/dialog.service";
 
@@ -23,8 +22,7 @@ export class ListaCategoriaComponent implements OnInit {
 
   constructor(
     private categoriaService: CategoriaService,
-    private dialog: DialogService,
-    private route: ActivatedRoute
+    private dialog: DialogService
   ) {}
 
   ngOnInit(): void {
