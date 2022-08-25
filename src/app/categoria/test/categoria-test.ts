@@ -32,6 +32,19 @@ export class CategoriaTest {
     pageCategoria.content = [];
     return pageCategoria;
   }
+
+  getPageComDuasPaginas():Page<Categoria[]> {
+    const pageCategoria = buildCategoriaLista();
+    const categorias: Categoria[] = [];
+    for(let i = 0; i< 20; i++) {
+      categorias.push({
+          id:i + 1,
+          nome: ''
+      });
+    }
+    pageCategoria.content = categorias;
+    return pageCategoria;
+  }
 }
 
 

@@ -67,18 +67,33 @@ describe(ListaCategoriaComponent.name, () => {
   it(`#${ListaCategoriaComponent.prototype.maisCategorias.name} deve
         dar o valor verdadeiro quando a listagem for carregada`, done => {
     const test = new CategoriaTest();
-    component.temMais = false;
+    component.temMais = true;
     fixture.detectChanges();
     let spy = spyOn(service, 'getPage')
       .and.returnValue(of(test.getPageListaVaiza()));
       component.maisCategorias();
     spy.calls.mostRecent().returnValue.subscribe(cat =>{
-      if(cat.content.length){
-        component.temMais = true;
+      if(!cat.content.length){
+        component.temMais = false;
       }
       fixture.detectChanges();
         expect(component.temMais).toBeFalse();
       done();
     });
   });
+
+  it(`#${ListaCategoriaComponent.prototype.paginate.name} deve
+        alterar a page quando função for solicitada`, () => {
+      const test = new CategoriaTest();
+      component.page = 0;
+      const event = {page:1};
+      let spy =spyOn(service, 'getPage').and.returnValue(of(test.getPageComDuasPaginas()));
+      fixture.detectChanges();
+      component.paginate(event);
+      spy.calls.mostRecent().returnValue.subscribe(cat =>{
+        component.page = 1;
+        fixture.detectChanges();
+      })
+      expect(component.page).toBe(1);
+    });
 });
