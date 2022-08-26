@@ -39,7 +39,7 @@ export class DialogService {
       parent: this.injector,
       providers: [
         {provide: DialogRef, useValue: dialogRef},
-        {provide: DIALOG_DATA, useValue: config}
+        {provide: DIALOG_DATA, useValue: config?.data}
       ]
     });
 

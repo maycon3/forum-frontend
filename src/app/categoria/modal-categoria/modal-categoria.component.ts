@@ -24,7 +24,7 @@ export class ModalCategoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
-    const categoria = this.data.data as Categoria;
+    const categoria = this.data as Categoria;
     if(categoria != undefined) {
       this.populaCategoria(categoria);
     }
