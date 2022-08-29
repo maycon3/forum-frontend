@@ -30,6 +30,11 @@ export class CursoTest{
     return cursoPage;
   }
 
+  getCursoPageValizo(): Page<Curso[]> {
+    const page = buildPageCurso();
+    page.content = [];
+    return page;
+  }
 }
 
 
@@ -50,7 +55,7 @@ function buildPageCurso(): Page<Curso[]> {
     last: false,
     totalElements: 11,
     totalPages: 2,
-    size: 10,
+    size: 2,
     number: 0,
     sort: {
       empty: false,
