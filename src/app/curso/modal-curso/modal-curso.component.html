@@ -1,7 +1,7 @@
 <section class="modal-curso">
  <header class="modal__cabecalho">
    <h1 class="modal__cabecalho___titulo">Curso</h1>
-   <span class="modal__cabecalho___icone fa fa-times" (click)="close()"></span>
+   <span class="modal__cabecalho___icone " (click)="close()"><fa-icon [icon]="icone"></fa-icon></span>
  </header>
  <form [formGroup]="modalCursoForm" class="modal-curso__formulario">
   <div class="modal-curso__group">

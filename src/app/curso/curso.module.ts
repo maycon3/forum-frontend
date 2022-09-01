@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import {PaginatorModule} from 'primeng/paginator';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { RoutingCursoModule } from "./routing-curso.module";
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
@@ -24,6 +25,7 @@ import { ModalModule } from "../shared/components/modal/modal.module";
     PaginatorModule,
     ModalModule,
     RoutingCursoModule,
+    FontAwesomeModule,
     CategoriaModule
   ],
   providers:[

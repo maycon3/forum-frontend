@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subject } from "rxjs";
 
 import { CategoriaService } from "src/app/categoria/services/categoria.service";
+import {faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { DialogRef } from "src/app/shared/components/modal/modalDialog/dialog-ref";
 import { DIALOG_DATA } from "src/app/shared/components/modal/modalDialog/dialog-token";
@@ -18,6 +19,7 @@ export class ModalCursoComponent implements OnInit {
 
   modalCursoForm: FormGroup;
   categorias$ = this.categoriaService.getAll();
+  icone = faTimes;
   private resultado = new Subject<void>();
 
   constructor(

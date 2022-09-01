@@ -1,7 +1,7 @@
   <section class="modal-categoria" >
       <header class="modal-categoria__cabecalho">
         <h2 class="modal-categoria__titlulo">Categoria</h2>
-        <span class="modal-categoria___icone fa fa-times" (click)="close()"></span>
+        <span class="modal-categoria___icone" (click)="close()"><fa-icon [icon]="icone"></fa-icon></span>
       </header>
       <form [formGroup]="categoriaForm">
         <div class="modal-categoria__form">

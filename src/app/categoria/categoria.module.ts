@@ -7,6 +7,7 @@ import {PaginatorModule} from 'primeng/paginator';
 import { ErroMsgModule } from "../shared/components/erro-msg/erro-msg.module";
 import { LoadButtonModule } from "../shared/components/load-button/load-button.module";
 import { ModalModule } from "../shared/components/modal/modal.module";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { CategoriaRoutingModule } from "./categoria-routing.module";
 import { CategoriaService } from "./services/categoria.service";
@@ -28,6 +29,7 @@ import { ModalCategoriaComponent } from "./modal-categoria/modal-categoria.compo
     LoadButtonModule,
     PaginatorModule,
     ModalModule,
+    FontAwesomeModule,
     CategoriaRoutingModule
   ],
   exports:[],

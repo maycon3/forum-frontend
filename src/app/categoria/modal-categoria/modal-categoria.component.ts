@@ -1,6 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import {faTimes } from '@fortawesome/free-solid-svg-icons';
+
 import { CategoriaService } from '../services/categoria.service';
 import { Categoria } from "../interfaces/categoria";
 import { DialogRef } from 'src/app/shared/components/modal/modalDialog/dialog-ref';
@@ -14,6 +16,7 @@ import { DIALOG_DATA } from 'src/app/shared/components/modal/modalDialog/dialog-
 export class ModalCategoriaComponent implements OnInit {
 
   categoriaForm: FormGroup;
+  icone = faTimes;
 
   constructor(
     private categoriaService: CategoriaService,
