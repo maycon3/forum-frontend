@@ -1,4 +1,40 @@
-<section>
- <h1>teste</h1>
+<section class="forum">
+
+  <ul class="forum-lista" *ngFor="let home of homes$ | async">
+    <li class="forum-lista__item">
+      <div class="forum-card">
+        <div class="forum-card__header">
+          <h3 class="forum-card__header___titulo">{{home.nome}}</h3>
+        </div>
+        <div class="forum-card__body" *ngIf="home.cursos.length">
+          <button class="forum__btn" (click)="expand(home)">ver cursos</button>
+          <div class="collapsible" [@collapse]="home.collapse">
+            <ul class="lista-curso" *ngFor="let curso of home.cursos">
+              <li class="lista-curso__item">
+                <a href="#" class="lista-curso__link">
+                  {{ curso.nomeCurso }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="forum-card__footer">
+
+          <div class="forum-card__footer__topico">
+            <span class="card-indicador">{{home.topico}}<br>
+              <a class="card-indicador__link">topicos</a>
+            </span>
+          </div>
+
+          <div class="forum-card__footer__resposta">
+            <span class="card-indicador">{{home.resposta}}<br>
+              <a class="card-indicador__link">sem resposta</a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </li>
+  </ul>
 
 </section>

@@ -1,52 +1,68 @@
-.icone-categoria {
-  width: 6%;
-  border-left: 1px solid #e3e8ed;;
+.forum-lista {
+  display: flex;
+  flex-direction: column;
+  margin-top:1em;
+}
+
+.forum-lista__item {
+  margin-bottom: 1em;
+}
+
+.forum-card {
+  width: 100%;
+  background-color: var(--cor-branco);
+}
+
+.forum-card__header {
+  padding: 1em;
+  border-top: 10px solid var( --cor-forum);
+}
+
+.forum-card__header___titulo {
   text-align: center;
+  color: var(--cor-forum);
+  font-size: 20px;
+  font-weight: 700;
 }
 
-h6{
-  margin:0;
+.forum__btn {
+  display: block;
+  width: 100%;
+  height: 35px;
+  background-color: var(--cor-btn-principal);
+  color: var(--cor-branco);
+  border-color: transparent;
 }
 
-.itens {
-  padding: 12px;
-  border-top: 1px solid #e3e8ed;;
-  border-bottom: 1px solid #e3e8ed;;
-  border-right: 1px solid #e3e8ed;;
-}
-
-
-.categoria-curso {
-  width: 60%;
-}
-
-.titulo-categoria {
-  padding: 10px 0;
-}
-
-.curso {
+.lista-curso {
   display: inline-block;
-  background-color: hsla(0,0%,84.7%,.4);
-  margin: 3px 3px 0 0;
+}
+
+.lista-curso__item {
+  padding: 1em .1em .5em .4em;
+}
+
+.lista-curso__link {
+  text-decoration: none;
+  font-size: 18px;
+  background-color: var( --cor-fundo-lista-curso-forum);
+  padding: .3em;
   border-radius: 5px;
-  padding: 4px;
-  font-size: 12px;
-  color:#747c81;
+  color:inherit;
 }
 
-.total-topicos {
-  width: 12%;
+.forum-card__footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
   text-align: center;
-  color: #747c81;
 }
 
-.topicos-sem-resposta {
-  width: 18%;
-  text-align: center;
-  color: #747c81;
+.collapsible {
+  overflow: hidden;
 }
 
-.link-topicos {
-  font-size: 12px;
-  color: #747c81;
+p {
+  margin: 0;
+  padding: 15px;
 }

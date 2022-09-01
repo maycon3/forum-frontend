@@ -4,6 +4,7 @@ export interface Home {
   cursos: Curso[];
   topico: number;
   resposta: number;
+  collapse: boolean;
 }
 
 export interface Curso {
