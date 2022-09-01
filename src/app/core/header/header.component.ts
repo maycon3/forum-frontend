@@ -1,7 +1,9 @@
-import { Component, EventEmitter, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { NgxSpinnerService } from "ngx-spinner";
+import {faBars } from '@fortawesome/free-solid-svg-icons';
+
 import { TokenService } from "../token/token.service";
 import { UserService } from "../user/user.service";
 
@@ -13,6 +15,7 @@ import { UserService } from "../user/user.service";
 export class HeaderComponent implements OnInit {
 
  nome: string|null = '';
+ icone = faBars;
 
   constructor(
     private router: Router,
@@ -33,9 +36,4 @@ export class HeaderComponent implements OnInit {
    estaLogado(): boolean {
     return this.tokenService.hasToken();
   }
-
-  test() {
-    console.log('vamos implementar esse metodo')
-  }
-
 }

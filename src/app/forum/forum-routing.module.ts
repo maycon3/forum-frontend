@@ -5,6 +5,11 @@ import { ForumComponent } from "./forum.component";
 import { ListaTopicoComponent } from "./topico/lista-topico/lista-topico.component";
 
 const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'todos'
+  },
   { path: 'todos', component: ForumComponent }
 ]
 

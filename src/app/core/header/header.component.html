@@ -1,7 +1,7 @@
 <header class="cabecalho" *ngIf="estaLogado()">
 
   <div class="cabecalho__menu">
-    <a class="cabecalho__menu___icone fa fa-bars" (click)="menu.toggle()"></a>
+    <a class="cabecalho__menu___icone" (click)="menu.toggle()"><fa-icon [icon]="icone"></fa-icon></a>
     <app-menu #menu></app-menu>
   </div>
 

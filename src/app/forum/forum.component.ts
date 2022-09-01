@@ -3,8 +3,10 @@ import { Component, OnInit } from "@angular/core";
 
 import { NgxSpinnerService } from "ngx-spinner";
 import { map } from "rxjs";
-import { Home } from "./home";
+import {faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
+import { Home } from "./home";
 import { HomeService } from "./home.service";
 
 const DEFAULT_DURATION = 300;
@@ -27,9 +29,9 @@ export class ForumComponent implements OnInit {
   homes$ = this.homeService.getAll()
     .pipe(
       map(homes => this.collapsar(homes))
-    )
+    );
 
-
+  icones = {cima:faChevronDown, baixo:faChevronUp};
   collapsed = true;
 
   constructor(
@@ -49,11 +51,17 @@ export class ForumComponent implements OnInit {
   expand(home: Home) {
     this.collapsed = !this.collapsed;
     home.collapse = this.collapsed;
+    home.icone = true;
+    setTimeout(() => {
+      home.icone = false;
+    }, 500);
   }
 
   private collapsar(homes: Home[]): Home[] {
-     homes.forEach(h => h.collapse = true);
-     console.log(homes);
+     homes.forEach(h =>{
+      h.collapse = true;
+      h.icone = false;
+     });
      return homes;
   }
 

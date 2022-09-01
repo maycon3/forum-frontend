@@ -5,6 +5,7 @@ import { HeaderComponent } from "./header/header.component";
 import {ToastModule} from 'primeng/toast';
 
 import { DropdownModule } from "../shared/components/dropdown/dropdown.module";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ApiService } from "./services/api.service";
 import { NgxSpinnerModule } from "ngx-spinner";
@@ -32,6 +33,7 @@ import { MenuComponent } from "./menu/menu.component";
     ToastModule,
     NgxSpinnerModule,
     DropdownModule,
+    FontAwesomeModule,
     RouterModule
   ],
   exports: [HeaderComponent,NgxSpinnerModule],

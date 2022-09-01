@@ -5,6 +5,7 @@ export interface Home {
   topico: number;
   resposta: number;
   collapse: boolean;
+  icone: boolean;
 }
 
 export interface Curso {
